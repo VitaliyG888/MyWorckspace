@@ -1,0 +1,18 @@
+name: rust-prototype
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - run: cargo fmt --all -- --check
+      - run: cargo check --all-features
+      - run: cargo clippy --all-targets --all-features -- -D warnings
+      - run: cargo test --all-features
+      - run: cargo bench --no-run
+      - run: python3 scripts/static_checks.py
+# Bootstrap CI, not a supply-chain hardened release workflow.
+# Pin actions/toolchain/image to reviewed immutable revisions and commit Cargo.lock before release.

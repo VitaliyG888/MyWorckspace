@@ -1,0 +1,1656 @@
+[
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 284,
+    "name": "nmap_scan",
+    "signature": "target: str, scan_type: str='-sV', ports: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/nmap'"
+    ],
+    "doc": "Execute an enhanced Nmap scan against a target with real-time logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 327,
+    "name": "gobuster_scan",
+    "signature": "url: str, mode: str='dir', wordlist: str='/usr/share/wordlists/dirb/common.txt', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/gobuster'"
+    ],
+    "doc": "Execute Gobuster to find directories, DNS subdomains, or virtual hosts with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 371,
+    "name": "nuclei_scan",
+    "signature": "target: str, severity: str='', tags: str='', template: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/nuclei'"
+    ],
+    "doc": "Execute Nuclei vulnerability scanner with enhanced logging and real-time progress.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 422,
+    "name": "prowler_scan",
+    "signature": "provider: str='aws', profile: str='default', region: str='', checks: str='', output_dir: str='/tmp/prowler_output', output_format: str='json', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/prowler'"
+    ],
+    "doc": "Execute Prowler for comprehensive cloud security assessment.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 456,
+    "name": "trivy_scan",
+    "signature": "scan_type: str='image', target: str='', output_format: str='json', severity: str='', output_file: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/trivy'"
+    ],
+    "doc": "Execute Trivy for container and filesystem vulnerability scanning.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 492,
+    "name": "scout_suite_assessment",
+    "signature": "provider: str='aws', profile: str='default', report_dir: str='/tmp/scout-suite', services: str='', exceptions: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/scout-suite'"
+    ],
+    "doc": "Execute Scout Suite for multi-cloud security assessment.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 526,
+    "name": "cloudmapper_analysis",
+    "signature": "action: str='collect', account: str='', config: str='config.json', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/cloudmapper'"
+    ],
+    "doc": "Execute CloudMapper for AWS network visualization and security analysis.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 555,
+    "name": "pacu_exploitation",
+    "signature": "session_name: str='hexstrike_session', modules: str='', data_services: str='', regions: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/pacu'"
+    ],
+    "doc": "Execute Pacu for AWS exploitation framework.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 587,
+    "name": "kube_hunter_scan",
+    "signature": "target: str='', remote: str='', cidr: str='', interface: str='', active: bool=False, report: str='json', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/kube-hunter'"
+    ],
+    "doc": "Execute kube-hunter for Kubernetes penetration testing.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 623,
+    "name": "kube_bench_cis",
+    "signature": "targets: str='', version: str='', config_dir: str='', output_format: str='json', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/kube-bench'"
+    ],
+    "doc": "Execute kube-bench for CIS Kubernetes benchmark checks.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 654,
+    "name": "docker_bench_security_scan",
+    "signature": "checks: str='', exclude: str='', output_file: str='/tmp/docker-bench-results.json', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/docker-bench-security'"
+    ],
+    "doc": "Execute Docker Bench for Security for Docker security assessment.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 684,
+    "name": "clair_vulnerability_scan",
+    "signature": "image: str, config: str='/etc/clair/config.yaml', output_format: str='json', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/clair'"
+    ],
+    "doc": "Execute Clair for container vulnerability analysis.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 713,
+    "name": "falco_runtime_monitoring",
+    "signature": "config_file: str='/etc/falco/falco.yaml', rules_file: str='', output_format: str='json', duration: int=60, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/falco'"
+    ],
+    "doc": "Execute Falco for runtime security monitoring.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 745,
+    "name": "checkov_iac_scan",
+    "signature": "directory: str='.', framework: str='', check: str='', skip_check: str='', output_format: str='json', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/checkov'"
+    ],
+    "doc": "Execute Checkov for infrastructure as code security scanning.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 779,
+    "name": "terrascan_iac_scan",
+    "signature": "scan_type: str='all', iac_dir: str='.', policy_type: str='', output_format: str='json', severity: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/terrascan'"
+    ],
+    "doc": "Execute Terrascan for infrastructure as code security scanning.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 817,
+    "name": "create_file",
+    "signature": "filename: str, content: str, binary: bool=False",
+    "http_calls": [
+      "'api/files/create'"
+    ],
+    "doc": "Create a file with specified content on the HexStrike server.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 843,
+    "name": "modify_file",
+    "signature": "filename: str, content: str, append: bool=False",
+    "http_calls": [
+      "'api/files/modify'"
+    ],
+    "doc": "Modify an existing file on the HexStrike server.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 869,
+    "name": "delete_file",
+    "signature": "filename: str",
+    "http_calls": [
+      "'api/files/delete'"
+    ],
+    "doc": "Delete a file or directory on the HexStrike server.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 891,
+    "name": "list_files",
+    "signature": "directory: str='.'",
+    "http_calls": [
+      "'api/files/list'"
+    ],
+    "doc": "List files in a directory on the HexStrike server.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 911,
+    "name": "generate_payload",
+    "signature": "payload_type: str='buffer', size: int=1024, pattern: str='A', filename: str=''",
+    "http_calls": [
+      "'api/payloads/generate'"
+    ],
+    "doc": "Generate large payloads for testing and exploitation.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 945,
+    "name": "install_python_package",
+    "signature": "package: str, env_name: str='default'",
+    "http_calls": [
+      "'api/python/install'"
+    ],
+    "doc": "Install a Python package in a virtual environment on the HexStrike server.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 969,
+    "name": "execute_python_script",
+    "signature": "script: str, env_name: str='default', filename: str=''",
+    "http_calls": [
+      "'api/python/execute'"
+    ],
+    "doc": "Execute a Python script in a virtual environment on the HexStrike server.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1001,
+    "name": "dirb_scan",
+    "signature": "url: str, wordlist: str='/usr/share/wordlists/dirb/common.txt', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/dirb'"
+    ],
+    "doc": "Execute Dirb for directory brute forcing with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1027,
+    "name": "nikto_scan",
+    "signature": "target: str, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/nikto'"
+    ],
+    "doc": "Execute Nikto web vulnerability scanner with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1051,
+    "name": "sqlmap_scan",
+    "signature": "url: str, data: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/sqlmap'"
+    ],
+    "doc": "Execute SQLMap for SQL injection testing with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1077,
+    "name": "metasploit_run",
+    "signature": "module: str, options: Dict[str, Any]={}",
+    "http_calls": [
+      "'api/tools/metasploit'"
+    ],
+    "doc": "Execute a Metasploit module with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1101,
+    "name": "hydra_attack",
+    "signature": "target: str, service: str, username: str='', username_file: str='', password: str='', password_file: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/hydra'"
+    ],
+    "doc": "Execute Hydra for password brute forcing with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1143,
+    "name": "john_crack",
+    "signature": "hash_file: str, wordlist: str='/usr/share/wordlists/rockyou.txt', format_type: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/john'"
+    ],
+    "doc": "Execute John the Ripper for password cracking with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1176,
+    "name": "wpscan_analyze",
+    "signature": "url: str, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/wpscan'"
+    ],
+    "doc": "Execute WPScan for WordPress vulnerability scanning with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1200,
+    "name": "enum4linux_scan",
+    "signature": "target: str, additional_args: str='-a'",
+    "http_calls": [
+      "'api/tools/enum4linux'"
+    ],
+    "doc": "Execute Enum4linux for SMB enumeration with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1224,
+    "name": "ffuf_scan",
+    "signature": "url: str, wordlist: str='/usr/share/wordlists/dirb/common.txt', mode: str='directory', match_codes: str='200,204,301,302,307,401,403', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/ffuf'"
+    ],
+    "doc": "Execute FFuf for web fuzzing with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1254,
+    "name": "netexec_scan",
+    "signature": "target: str, protocol: str='smb', username: str='', password: str='', hash_value: str='', module: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/netexec'"
+    ],
+    "doc": "Execute NetExec (formerly CrackMapExec) for network enumeration with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1288,
+    "name": "amass_scan",
+    "signature": "domain: str, mode: str='enum', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/amass'"
+    ],
+    "doc": "Execute Amass for subdomain enumeration with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1314,
+    "name": "hashcat_crack",
+    "signature": "hash_file: str, hash_type: str, attack_mode: str='0', wordlist: str='/usr/share/wordlists/rockyou.txt', mask: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/hashcat'"
+    ],
+    "doc": "Execute Hashcat for advanced password cracking with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1346,
+    "name": "subfinder_scan",
+    "signature": "domain: str, silent: bool=True, all_sources: bool=False, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/subfinder'"
+    ],
+    "doc": "Execute Subfinder for passive subdomain enumeration with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1374,
+    "name": "smbmap_scan",
+    "signature": "target: str, username: str='', password: str='', domain: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/smbmap'"
+    ],
+    "doc": "Execute SMBMap for SMB share enumeration with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1408,
+    "name": "rustscan_fast_scan",
+    "signature": "target: str, ports: str='', ulimit: int=5000, batch_size: int=4500, timeout: int=1500, scripts: bool=False, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/rustscan'"
+    ],
+    "doc": "Execute Rustscan for ultra-fast port scanning with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1444,
+    "name": "masscan_high_speed",
+    "signature": "target: str, ports: str='1-65535', rate: int=1000, interface: str='', router_mac: str='', source_ip: str='', banners: bool=False, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/masscan'"
+    ],
+    "doc": "Execute Masscan for high-speed Internet-scale port scanning with intelligent rate limiting.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1482,
+    "name": "nmap_advanced_scan",
+    "signature": "target: str, scan_type: str='-sS', ports: str='', timing: str='T4', nse_scripts: str='', os_detection: bool=False, version_detection: bool=False, aggressive: bool=False, stealth: bool=False, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/nmap-advanced'"
+    ],
+    "doc": "Execute advanced Nmap scans with custom NSE scripts and optimized timing.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1525,
+    "name": "autorecon_comprehensive",
+    "signature": "target: str, output_dir: str='/tmp/autorecon', port_scans: str='top-100-ports', service_scans: str='default', heartbeat: int=60, timeout: int=300, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/autorecon'"
+    ],
+    "doc": "Execute AutoRecon for comprehensive automated reconnaissance.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1562,
+    "name": "enum4linux_ng_advanced",
+    "signature": "target: str, username: str='', password: str='', domain: str='', shares: bool=True, users: bool=True, groups: bool=True, policy: bool=True, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/enum4linux-ng'"
+    ],
+    "doc": "Execute Enum4linux-ng for advanced SMB enumeration with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1603,
+    "name": "rpcclient_enumeration",
+    "signature": "target: str, username: str='', password: str='', domain: str='', commands: str='enumdomusers;enumdomgroups;querydominfo', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/rpcclient'"
+    ],
+    "doc": "Execute rpcclient for RPC enumeration with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1637,
+    "name": "nbtscan_netbios",
+    "signature": "target: str, verbose: bool=False, timeout: int=2, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/nbtscan'"
+    ],
+    "doc": "Execute nbtscan for NetBIOS name scanning with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1666,
+    "name": "arp_scan_discovery",
+    "signature": "target: str='', interface: str='', local_network: bool=False, timeout: int=500, retry: int=3, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/arp-scan'"
+    ],
+    "doc": "Execute arp-scan for network discovery with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1699,
+    "name": "responder_credential_harvest",
+    "signature": "interface: str='eth0', analyze: bool=False, wpad: bool=True, force_wpad_auth: bool=False, fingerprint: bool=False, duration: int=300, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/responder'"
+    ],
+    "doc": "Execute Responder for credential harvesting with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1736,
+    "name": "volatility_analyze",
+    "signature": "memory_file: str, plugin: str, profile: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/volatility'"
+    ],
+    "doc": "Execute Volatility for memory forensics analysis with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1764,
+    "name": "msfvenom_generate",
+    "signature": "payload: str, format_type: str='', output_file: str='', encoder: str='', iterations: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/msfvenom'"
+    ],
+    "doc": "Execute MSFVenom for payload generation with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1800,
+    "name": "gdb_analyze",
+    "signature": "binary: str, commands: str='', script_file: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/gdb'"
+    ],
+    "doc": "Execute GDB for binary analysis and debugging with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1828,
+    "name": "radare2_analyze",
+    "signature": "binary: str, commands: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/radare2'"
+    ],
+    "doc": "Execute Radare2 for binary analysis and reverse engineering with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1854,
+    "name": "binwalk_analyze",
+    "signature": "file_path: str, extract: bool=False, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/binwalk'"
+    ],
+    "doc": "Execute Binwalk for firmware and file analysis with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1880,
+    "name": "ropgadget_search",
+    "signature": "binary: str, gadget_type: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/ropgadget'"
+    ],
+    "doc": "Search for ROP gadgets in a binary using ROPgadget with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1906,
+    "name": "checksec_analyze",
+    "signature": "binary: str",
+    "http_calls": [
+      "'api/tools/checksec'"
+    ],
+    "doc": "Check security features of a binary with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1928,
+    "name": "xxd_hexdump",
+    "signature": "file_path: str, offset: str='0', length: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/xxd'"
+    ],
+    "doc": "Create a hex dump of a file using xxd with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1956,
+    "name": "strings_extract",
+    "signature": "file_path: str, min_len: int=4, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/strings'"
+    ],
+    "doc": "Extract strings from a binary file with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 1982,
+    "name": "objdump_analyze",
+    "signature": "binary: str, disassemble: bool=True, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/objdump'"
+    ],
+    "doc": "Analyze a binary using objdump with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2012,
+    "name": "ghidra_analysis",
+    "signature": "binary: str, project_name: str='hexstrike_analysis', script_file: str='', analysis_timeout: int=300, output_format: str='xml', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/ghidra'"
+    ],
+    "doc": "Execute Ghidra for advanced binary analysis and reverse engineering.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2046,
+    "name": "pwntools_exploit",
+    "signature": "script_content: str='', target_binary: str='', target_host: str='', target_port: int=0, exploit_type: str='local', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/pwntools'"
+    ],
+    "doc": "Execute Pwntools for exploit development and automation.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2080,
+    "name": "one_gadget_search",
+    "signature": "libc_path: str, level: int=1, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/one-gadget'"
+    ],
+    "doc": "Execute one_gadget to find one-shot RCE gadgets in libc.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2106,
+    "name": "libc_database_lookup",
+    "signature": "action: str='find', symbols: str='', libc_id: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/libc-database'"
+    ],
+    "doc": "Execute libc-database for libc identification and offset lookup.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2135,
+    "name": "gdb_peda_debug",
+    "signature": "binary: str='', commands: str='', attach_pid: int=0, core_file: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/gdb-peda'"
+    ],
+    "doc": "Execute GDB with PEDA for enhanced debugging and exploitation.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2166,
+    "name": "angr_symbolic_execution",
+    "signature": "binary: str, script_content: str='', find_address: str='', avoid_addresses: str='', analysis_type: str='symbolic', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/angr'"
+    ],
+    "doc": "Execute angr for symbolic execution and binary analysis.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2200,
+    "name": "ropper_gadget_search",
+    "signature": "binary: str, gadget_type: str='rop', quality: int=1, arch: str='', search_string: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/ropper'"
+    ],
+    "doc": "Execute ropper for advanced ROP/JOP gadget searching.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2234,
+    "name": "pwninit_setup",
+    "signature": "binary: str, libc: str='', ld: str='', template_type: str='python', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/pwninit'"
+    ],
+    "doc": "Execute pwninit for CTF binary exploitation setup.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2265,
+    "name": "feroxbuster_scan",
+    "signature": "url: str, wordlist: str='/usr/share/wordlists/dirb/common.txt', threads: int=10, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/feroxbuster'"
+    ],
+    "doc": "Execute Feroxbuster for recursive content discovery with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2293,
+    "name": "dotdotpwn_scan",
+    "signature": "target: str, module: str='http', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/dotdotpwn'"
+    ],
+    "doc": "Execute DotDotPwn for directory traversal testing with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2319,
+    "name": "xsser_scan",
+    "signature": "url: str, params: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/xsser'"
+    ],
+    "doc": "Execute XSSer for XSS vulnerability testing with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2345,
+    "name": "wfuzz_scan",
+    "signature": "url: str, wordlist: str='/usr/share/wordlists/dirb/common.txt', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/wfuzz'"
+    ],
+    "doc": "Execute Wfuzz for web application fuzzing with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2375,
+    "name": "dirsearch_scan",
+    "signature": "url: str, extensions: str='php,html,js,txt,xml,json', wordlist: str='/usr/share/wordlists/dirsearch/common.txt', threads: int=30, recursive: bool=False, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/dirsearch'"
+    ],
+    "doc": "Execute Dirsearch for advanced directory and file discovery with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2409,
+    "name": "katana_crawl",
+    "signature": "url: str, depth: int=3, js_crawl: bool=True, form_extraction: bool=True, output_format: str='json', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/katana'"
+    ],
+    "doc": "Execute Katana for next-generation crawling and spidering with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2443,
+    "name": "gau_discovery",
+    "signature": "domain: str, providers: str='wayback,commoncrawl,otx,urlscan', include_subs: bool=True, blacklist: str='png,jpg,gif,jpeg,swf,woff,svg,pdf,css,ico', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/gau'"
+    ],
+    "doc": "Execute Gau (Get All URLs) for URL discovery from multiple sources with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2475,
+    "name": "waybackurls_discovery",
+    "signature": "domain: str, get_versions: bool=False, no_subs: bool=False, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/waybackurls'"
+    ],
+    "doc": "Execute Waybackurls for historical URL discovery with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2504,
+    "name": "arjun_parameter_discovery",
+    "signature": "url: str, method: str='GET', wordlist: str='', delay: int=0, threads: int=25, stable: bool=False, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/arjun'"
+    ],
+    "doc": "Execute Arjun for HTTP parameter discovery with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2540,
+    "name": "paramspider_mining",
+    "signature": "domain: str, level: int=2, exclude: str='png,jpg,gif,jpeg,swf,woff,svg,pdf,css,ico', output: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/paramspider'"
+    ],
+    "doc": "Execute ParamSpider for parameter mining from web archives with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2572,
+    "name": "x8_parameter_discovery",
+    "signature": "url: str, wordlist: str='/usr/share/wordlists/x8/params.txt', method: str='GET', body: str='', headers: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/x8'"
+    ],
+    "doc": "Execute x8 for hidden parameter discovery with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2606,
+    "name": "jaeles_vulnerability_scan",
+    "signature": "url: str, signatures: str='', config: str='', threads: int=20, timeout: int=20, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/jaeles'"
+    ],
+    "doc": "Execute Jaeles for advanced vulnerability scanning with custom signatures.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2640,
+    "name": "dalfox_xss_scan",
+    "signature": "url: str, pipe_mode: bool=False, blind: bool=False, mining_dom: bool=True, mining_dict: bool=True, custom_payload: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/dalfox'"
+    ],
+    "doc": "Execute Dalfox for advanced XSS vulnerability scanning with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2676,
+    "name": "httpx_probe",
+    "signature": "target: str, probe: bool=True, tech_detect: bool=False, status_code: bool=False, content_length: bool=False, title: bool=False, web_server: bool=False, threads: int=50, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/httpx'"
+    ],
+    "doc": "Execute httpx for fast HTTP probing and technology detection.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2717,
+    "name": "anew_data_processing",
+    "signature": "input_data: str, output_file: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/anew'"
+    ],
+    "doc": "Execute anew for appending new lines to files (useful for data processing).",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2744,
+    "name": "qsreplace_parameter_replacement",
+    "signature": "urls: str, replacement: str='FUZZ', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/qsreplace'"
+    ],
+    "doc": "Execute qsreplace for query string parameter replacement.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2771,
+    "name": "uro_url_filtering",
+    "signature": "urls: str, whitelist: str='', blacklist: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/uro'"
+    ],
+    "doc": "Execute uro for filtering out similar URLs.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2804,
+    "name": "ai_generate_payload",
+    "signature": "attack_type: str, complexity: str='basic', technology: str='', url: str=''",
+    "http_calls": [
+      "'api/ai/generate_payload'"
+    ],
+    "doc": "Generate AI-powered contextual payloads for security testing.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2845,
+    "name": "ai_test_payload",
+    "signature": "payload: str, target_url: str, method: str='GET'",
+    "http_calls": [
+      "'api/ai/test_payload'"
+    ],
+    "doc": "Test generated payload against target with AI analysis.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2880,
+    "name": "ai_generate_attack_suite",
+    "signature": "target_url: str, attack_types: str='xss,sqli,lfi'",
+    "http_calls": [],
+    "doc": "Generate comprehensive attack suite with multiple payload types.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2941,
+    "name": "api_fuzzer",
+    "signature": "base_url: str, endpoints: str='', methods: str='GET,POST,PUT,DELETE', wordlist: str='/usr/share/wordlists/api/api-endpoints.txt'",
+    "http_calls": [
+      "'api/tools/api_fuzzer'"
+    ],
+    "doc": "Advanced API endpoint fuzzing with intelligent parameter discovery.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 2977,
+    "name": "graphql_scanner",
+    "signature": "endpoint: str, introspection: bool=True, query_depth: int=10, test_mutations: bool=True",
+    "http_calls": [
+      "'api/tools/graphql_scanner'"
+    ],
+    "doc": "Advanced GraphQL security scanning and introspection.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3019,
+    "name": "jwt_analyzer",
+    "signature": "jwt_token: str, target_url: str=''",
+    "http_calls": [
+      "'api/tools/jwt_analyzer'"
+    ],
+    "doc": "Advanced JWT token analysis and vulnerability testing.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3058,
+    "name": "api_schema_analyzer",
+    "signature": "schema_url: str, schema_type: str='openapi'",
+    "http_calls": [
+      "'api/tools/api_schema_analyzer'"
+    ],
+    "doc": "Analyze API schemas and identify potential security issues.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3103,
+    "name": "comprehensive_api_audit",
+    "signature": "base_url: str, schema_url: str='', jwt_token: str='', graphql_endpoint: str=''",
+    "http_calls": [],
+    "doc": "Comprehensive API security audit combining multiple testing techniques.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3201,
+    "name": "volatility3_analyze",
+    "signature": "memory_file: str, plugin: str, output_file: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/volatility3'"
+    ],
+    "doc": "Execute Volatility3 for advanced memory forensics with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3229,
+    "name": "foremost_carving",
+    "signature": "input_file: str, output_dir: str='/tmp/foremost_output', file_types: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/foremost'"
+    ],
+    "doc": "Execute Foremost for file carving with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3257,
+    "name": "steghide_analysis",
+    "signature": "action: str, cover_file: str, embed_file: str='', passphrase: str='', output_file: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/steghide'"
+    ],
+    "doc": "Execute Steghide for steganography analysis with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3289,
+    "name": "exiftool_extract",
+    "signature": "file_path: str, output_format: str='', tags: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/exiftool'"
+    ],
+    "doc": "Execute ExifTool for metadata extraction with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3317,
+    "name": "hashpump_attack",
+    "signature": "signature: str, data: str, key_length: str, append_data: str, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/hashpump'"
+    ],
+    "doc": "Execute HashPump for hash length extension attacks with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3351,
+    "name": "hakrawler_crawl",
+    "signature": "url: str, depth: int=2, forms: bool=True, robots: bool=True, sitemap: bool=True, wayback: bool=False, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/hakrawler'"
+    ],
+    "doc": "Execute Hakrawler for web endpoint discovery with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3392,
+    "name": "httpx_probe",
+    "signature": "targets: str='', target_file: str='', ports: str='', methods: str='GET', status_code: str='', content_length: bool=False, output_file: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/httpx'"
+    ],
+    "doc": "Execute HTTPx for HTTP probing with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3428,
+    "name": "paramspider_discovery",
+    "signature": "domain: str, exclude: str='', output_file: str='', level: int=2, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/paramspider'"
+    ],
+    "doc": "Execute ParamSpider for parameter discovery with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3462,
+    "name": "burpsuite_scan",
+    "signature": "project_file: str='', config_file: str='', target: str='', headless: bool=False, scan_type: str='', scan_config: str='', output_file: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/burpsuite'"
+    ],
+    "doc": "Execute Burp Suite with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3498,
+    "name": "zap_scan",
+    "signature": "target: str='', scan_type: str='baseline', api_key: str='', daemon: bool=False, port: str='8090', host: str='0.0.0.0', format_type: str='xml', output_file: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/zap'"
+    ],
+    "doc": "Execute OWASP ZAP with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3536,
+    "name": "arjun_scan",
+    "signature": "url: str, method: str='GET', data: str='', headers: str='', timeout: str='', output_file: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/arjun'"
+    ],
+    "doc": "Execute Arjun for parameter discovery with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3570,
+    "name": "wafw00f_scan",
+    "signature": "target: str, additional_args: str=''",
+    "http_calls": [
+      "'api/tools/wafw00f'"
+    ],
+    "doc": "Execute wafw00f to identify and fingerprint WAF products with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3594,
+    "name": "fierce_scan",
+    "signature": "domain: str, dns_server: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/fierce'"
+    ],
+    "doc": "Execute fierce for DNS reconnaissance with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3620,
+    "name": "dnsenum_scan",
+    "signature": "domain: str, dns_server: str='', wordlist: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/dnsenum'"
+    ],
+    "doc": "Execute dnsenum for DNS enumeration with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3648,
+    "name": "autorecon_scan",
+    "signature": "target: str='', target_file: str='', ports: str='', output_dir: str='', max_scans: str='', max_port_scans: str='', heartbeat: str='', timeout: str='', target_timeout: str='', config_file: str='', global_file: str='', plugins_dir: str='', add_plugins_dir: str='', tags: str='', exclude_tags: str='', port_scans: str='', service_scans: str='', reports: str='', single_target: bool=False, only_scans_dir: bool=False, no_port_dirs: bool=False, nmap: str='', nmap_append: str='', proxychains: bool=False, disable_sanity_checks: bool=False, disable_keyboard_control: bool=False, force_services: str='', accessible: bool=False, verbose: int=0, curl_path: str='', dirbuster_tool: str='', dirbuster_wordlist: str='', dirbuster_threads: str='', dirbuster_ext: str='', onesixtyone_community_strings: str='', global_username_wordlist: str='', global_password_wordlist: str='', global_domain: str='', additional_args: str=''",
+    "http_calls": [
+      "'api/tools/autorecon'"
+    ],
+    "doc": "Execute AutoRecon for comprehensive target enumeration with full parameter support.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3790,
+    "name": "server_health",
+    "signature": "",
+    "http_calls": [],
+    "doc": "Check the health status of the HexStrike AI server.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3806,
+    "name": "get_cache_stats",
+    "signature": "",
+    "http_calls": [
+      "'api/cache/stats'"
+    ],
+    "doc": "Get cache statistics from the HexStrike AI server.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3820,
+    "name": "clear_cache",
+    "signature": "",
+    "http_calls": [
+      "'api/cache/clear'"
+    ],
+    "doc": "Clear the cache on the HexStrike AI server.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3836,
+    "name": "get_telemetry",
+    "signature": "",
+    "http_calls": [
+      "'api/telemetry'"
+    ],
+    "doc": "Get system telemetry from the HexStrike AI server.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3854,
+    "name": "list_active_processes",
+    "signature": "",
+    "http_calls": [
+      "'api/processes/list'"
+    ],
+    "doc": "List all active processes on the HexStrike AI server.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3870,
+    "name": "get_process_status",
+    "signature": "pid: int",
+    "http_calls": [
+      "f'api/processes/status/{pid}'"
+    ],
+    "doc": "Get the status of a specific process.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3889,
+    "name": "terminate_process",
+    "signature": "pid: int",
+    "http_calls": [
+      "f'api/processes/terminate/{pid}'"
+    ],
+    "doc": "Terminate a specific running process.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3908,
+    "name": "pause_process",
+    "signature": "pid: int",
+    "http_calls": [
+      "f'api/processes/pause/{pid}'"
+    ],
+    "doc": "Pause a specific running process.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3927,
+    "name": "resume_process",
+    "signature": "pid: int",
+    "http_calls": [
+      "f'api/processes/resume/{pid}'"
+    ],
+    "doc": "Resume a paused process.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3946,
+    "name": "get_process_dashboard",
+    "signature": "",
+    "http_calls": [
+      "'api/processes/dashboard'"
+    ],
+    "doc": "Get enhanced process dashboard with visual status indicators.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 3969,
+    "name": "execute_command",
+    "signature": "command: str, use_cache: bool=True",
+    "http_calls": [],
+    "doc": "Execute an arbitrary command on the HexStrike AI server with enhanced logging.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4013,
+    "name": "monitor_cve_feeds",
+    "signature": "hours: int=24, severity_filter: str='HIGH,CRITICAL', keywords: str=''",
+    "http_calls": [
+      "'api/vuln-intel/cve-monitor'"
+    ],
+    "doc": "Monitor CVE databases for new vulnerabilities with AI analysis.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4044,
+    "name": "generate_exploit_from_cve",
+    "signature": "cve_id: str, target_os: str='', target_arch: str='x64', exploit_type: str='poc', evasion_level: str='none'",
+    "http_calls": [
+      "'api/vuln-intel/exploit-generate'"
+    ],
+    "doc": "Generate working exploits from CVE information using AI-powered analysis.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4083,
+    "name": "discover_attack_chains",
+    "signature": "target_software: str, attack_depth: int=3, include_zero_days: bool=False",
+    "http_calls": [
+      "'api/vuln-intel/attack-chains'"
+    ],
+    "doc": "Discover multi-stage attack chains for target software with vulnerability correlation.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4117,
+    "name": "research_zero_day_opportunities",
+    "signature": "target_software: str, analysis_depth: str='standard', source_code_url: str=''",
+    "http_calls": [
+      "'api/vuln-intel/zero-day-research'"
+    ],
+    "doc": "Automated zero-day vulnerability research using AI analysis and pattern recognition.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4154,
+    "name": "correlate_threat_intelligence",
+    "signature": "indicators: str, timeframe: str='30d', sources: str='all'",
+    "http_calls": [
+      "'api/vuln-intel/threat-feeds'"
+    ],
+    "doc": "Correlate threat intelligence across multiple sources with advanced analysis.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4200,
+    "name": "advanced_payload_generation",
+    "signature": "attack_type: str, target_context: str='', evasion_level: str='standard', custom_constraints: str=''",
+    "http_calls": [
+      "'api/ai/advanced-payload-generation'"
+    ],
+    "doc": "Generate advanced payloads with AI-powered evasion techniques and contextual adaptation.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4248,
+    "name": "vulnerability_intelligence_dashboard",
+    "signature": "",
+    "http_calls": [
+      "'api/vuln-intel/cve-monitor'",
+      "'api/vuln-intel/zero-day-research'"
+    ],
+    "doc": "Get a comprehensive vulnerability intelligence dashboard with latest threats and trends.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4302,
+    "name": "threat_hunting_assistant",
+    "signature": "target_environment: str, threat_indicators: str='', hunt_focus: str='general'",
+    "http_calls": [],
+    "doc": "AI-powered threat hunting assistant with vulnerability correlation and attack simulation.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4412,
+    "name": "get_live_dashboard",
+    "signature": "",
+    "http_calls": [
+      "'api/processes/dashboard'"
+    ],
+    "doc": "Get a beautiful live dashboard showing all active processes with enhanced visual formatting.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4428,
+    "name": "create_vulnerability_report",
+    "signature": "vulnerabilities: str, target: str='', scan_type: str='comprehensive'",
+    "http_calls": [
+      "'api/visual/summary-report'",
+      "'api/visual/vulnerability-card'"
+    ],
+    "doc": "Create a beautiful vulnerability report with severity-based styling and visual indicators.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4482,
+    "name": "format_tool_output_visual",
+    "signature": "tool_name: str, output: str, success: bool=True",
+    "http_calls": [
+      "'api/visual/tool-output'"
+    ],
+    "doc": "Format tool output with beautiful visual styling, syntax highlighting, and structure.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4511,
+    "name": "create_scan_summary",
+    "signature": "target: str, tools_used: str, vulnerabilities_found: int=0, execution_time: float=0.0, findings: str=''",
+    "http_calls": [
+      "'api/visual/summary-report'"
+    ],
+    "doc": "Create a comprehensive scan summary report with beautiful visual formatting.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4547,
+    "name": "display_system_metrics",
+    "signature": "",
+    "http_calls": [
+      "'api/telemetry'"
+    ],
+    "doc": "Display current system metrics and performance indicators with visual formatting.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4596,
+    "name": "analyze_target_intelligence",
+    "signature": "target: str",
+    "http_calls": [
+      "'api/intelligence/analyze-target'"
+    ],
+    "doc": "Analyze target using AI-powered intelligence to create comprehensive profile.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4620,
+    "name": "select_optimal_tools_ai",
+    "signature": "target: str, objective: str='comprehensive'",
+    "http_calls": [
+      "'api/intelligence/select-tools'"
+    ],
+    "doc": "Use AI to select optimal security tools based on target analysis and testing objective.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4648,
+    "name": "optimize_tool_parameters_ai",
+    "signature": "target: str, tool: str, context: str='{}'",
+    "http_calls": [
+      "'api/intelligence/optimize-parameters'"
+    ],
+    "doc": "Use AI to optimize tool parameters based on target profile and context.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4685,
+    "name": "create_attack_chain_ai",
+    "signature": "target: str, objective: str='comprehensive'",
+    "http_calls": [
+      "'api/intelligence/create-attack-chain'"
+    ],
+    "doc": "Create an intelligent attack chain using AI-driven tool sequencing and optimization.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4717,
+    "name": "intelligent_smart_scan",
+    "signature": "target: str, objective: str='comprehensive', max_tools: int=5",
+    "http_calls": [
+      "'api/intelligence/smart-scan'"
+    ],
+    "doc": "Execute an intelligent scan using AI-driven tool selection and parameter optimization.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4770,
+    "name": "detect_technologies_ai",
+    "signature": "target: str",
+    "http_calls": [
+      "'api/intelligence/technology-detection'"
+    ],
+    "doc": "Use AI to detect technologies and provide technology-specific testing recommendations.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4802,
+    "name": "ai_reconnaissance_workflow",
+    "signature": "target: str, depth: str='standard'",
+    "http_calls": [
+      "'api/intelligence/analyze-target'",
+      "'api/intelligence/create-attack-chain'",
+      "'api/intelligence/smart-scan'"
+    ],
+    "doc": "Execute AI-driven reconnaissance workflow with intelligent tool chaining.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4851,
+    "name": "ai_vulnerability_assessment",
+    "signature": "target: str, focus_areas: str='all'",
+    "http_calls": [
+      "'api/intelligence/analyze-target'",
+      "'api/intelligence/smart-scan'"
+    ],
+    "doc": "Perform AI-driven vulnerability assessment with intelligent prioritization.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4911,
+    "name": "bugbounty_reconnaissance_workflow",
+    "signature": "domain: str, scope: str='', out_of_scope: str='', program_type: str='web'",
+    "http_calls": [
+      "'api/bugbounty/reconnaissance-workflow'"
+    ],
+    "doc": "Create comprehensive reconnaissance workflow for bug bounty hunting.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4944,
+    "name": "bugbounty_vulnerability_hunting",
+    "signature": "domain: str, priority_vulns: str='rce,sqli,xss,idor,ssrf', bounty_range: str='unknown'",
+    "http_calls": [
+      "'api/bugbounty/vulnerability-hunting-workflow'"
+    ],
+    "doc": "Create vulnerability hunting workflow prioritized by impact and bounty potential.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 4975,
+    "name": "bugbounty_business_logic_testing",
+    "signature": "domain: str, program_type: str='web'",
+    "http_calls": [
+      "'api/bugbounty/business-logic-workflow'"
+    ],
+    "doc": "Create business logic testing workflow for advanced bug bounty hunting.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5004,
+    "name": "bugbounty_osint_gathering",
+    "signature": "domain: str",
+    "http_calls": [
+      "'api/bugbounty/osint-workflow'"
+    ],
+    "doc": "Create OSINT (Open Source Intelligence) gathering workflow for bug bounty reconnaissance.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5029,
+    "name": "bugbounty_file_upload_testing",
+    "signature": "target_url: str",
+    "http_calls": [
+      "'api/bugbounty/file-upload-testing'"
+    ],
+    "doc": "Create file upload vulnerability testing workflow with bypass techniques.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5054,
+    "name": "bugbounty_comprehensive_assessment",
+    "signature": "domain: str, scope: str='', priority_vulns: str='rce,sqli,xss,idor,ssrf', include_osint: bool=True, include_business_logic: bool=True",
+    "http_calls": [
+      "'api/bugbounty/comprehensive-assessment'"
+    ],
+    "doc": "Create comprehensive bug bounty assessment combining all specialized workflows.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5092,
+    "name": "bugbounty_authentication_bypass_testing",
+    "signature": "target_url: str, auth_type: str='form'",
+    "http_calls": [],
+    "doc": "Create authentication bypass testing workflow for bug bounty hunting.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5157,
+    "name": "http_framework_test",
+    "signature": "url: str, method: str='GET', data: dict={}, headers: dict={}, cookies: dict={}, action: str='request'",
+    "http_calls": [
+      "'api/tools/http-framework'"
+    ],
+    "doc": "Enhanced HTTP testing framework (Burp Suite alternative) for comprehensive web security testing.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5198,
+    "name": "browser_agent_inspect",
+    "signature": "url: str, headless: bool=True, wait_time: int=5, action: str='navigate', proxy_port: int=None, active_tests: bool=False",
+    "http_calls": [
+      "'api/tools/browser-agent'"
+    ],
+    "doc": "AI-powered browser agent for comprehensive web application inspection and security analysis.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5246,
+    "name": "http_set_rules",
+    "signature": "rules: list",
+    "http_calls": [
+      "'api/tools/http-framework'"
+    ],
+    "doc": "Set match/replace rules used to rewrite parts of URL/query/headers/body before sending.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5253,
+    "name": "http_set_scope",
+    "signature": "host: str, include_subdomains: bool=True",
+    "http_calls": [
+      "'api/tools/http-framework'"
+    ],
+    "doc": "Define in-scope host (and optionally subdomains) so out-of-scope requests are skipped.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5259,
+    "name": "http_repeater",
+    "signature": "request_spec: dict",
+    "http_calls": [
+      "'api/tools/http-framework'"
+    ],
+    "doc": "Send a crafted request (Burp Repeater equivalent). request_spec keys: url, method, headers, cookies, data.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5265,
+    "name": "http_intruder",
+    "signature": "url: str, method: str='GET', location: str='query', params: list=None, payloads: list=None, base_data: dict=None, max_requests: int=100",
+    "http_calls": [
+      "'api/tools/http-framework'"
+    ],
+    "doc": "Simple Intruder (sniper) fuzzing. Iterates payloads over each param individually.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5282,
+    "name": "burpsuite_alternative_scan",
+    "signature": "target: str, scan_type: str='comprehensive', headless: bool=True, max_depth: int=3, max_pages: int=50",
+    "http_calls": [
+      "'api/tools/burpsuite-alternative'"
+    ],
+    "doc": "Comprehensive Burp Suite alternative combining HTTP framework and browser agent for complete web security testing.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5343,
+    "name": "error_handling_statistics",
+    "signature": "",
+    "http_calls": [
+      "'api/error-handling/statistics'"
+    ],
+    "doc": "Get intelligent error handling system statistics and recent error patterns.",
+    "status": "inventoried_not_ported"
+  },
+  {
+    "file": "hexstrike_mcp.py",
+    "line": 5374,
+    "name": "test_error_recovery",
+    "signature": "tool_name: str, error_type: str='timeout', target: str='example.com'",
+    "http_calls": [
+      "'api/error-handling/test-recovery'"
+    ],
+    "doc": "Test the intelligent error recovery system with simulated failures.",
+    "status": "inventoried_not_ported"
+  }
+]

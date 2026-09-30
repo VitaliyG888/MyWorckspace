@@ -1,0 +1,4517 @@
+[
+  {
+    "source": "hexstrike_server.py",
+    "line": 9024,
+    "handler": "health_check",
+    "path": "/health",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9138,
+    "handler": "generic_command",
+    "path": "/api/command",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'command'",
+        "default": "''",
+        "line": 9142
+      },
+      {
+        "key": "'use_cache'",
+        "default": "True",
+        "line": 9143
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9163,
+    "handler": "create_file",
+    "path": "/api/files/create",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'filename'",
+        "default": "''",
+        "line": 9167
+      },
+      {
+        "key": "'content'",
+        "default": "''",
+        "line": 9168
+      },
+      {
+        "key": "'binary'",
+        "default": "False",
+        "line": 9169
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9181,
+    "handler": "modify_file",
+    "path": "/api/files/modify",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'filename'",
+        "default": "''",
+        "line": 9185
+      },
+      {
+        "key": "'content'",
+        "default": "''",
+        "line": 9186
+      },
+      {
+        "key": "'append'",
+        "default": "False",
+        "line": 9187
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9199,
+    "handler": "delete_file",
+    "path": "/api/files/delete",
+    "methods": [
+      "DELETE"
+    ],
+    "input_fields": [
+      {
+        "key": "'filename'",
+        "default": "''",
+        "line": 9203
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9215,
+    "handler": "list_files",
+    "path": "/api/files/list",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [
+      {
+        "key": "'directory'",
+        "default": "'.'",
+        "line": 9218
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9227,
+    "handler": "generate_payload",
+    "path": "/api/payloads/generate",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'type'",
+        "default": "'buffer'",
+        "line": 9231
+      },
+      {
+        "key": "'size'",
+        "default": "1024",
+        "line": 9232
+      },
+      {
+        "key": "'pattern'",
+        "default": "'A'",
+        "line": 9233
+      },
+      {
+        "key": "'filename'",
+        "default": "f'payload_{int(time.time())}'",
+        "line": 9234
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9269,
+    "handler": "cache_stats",
+    "path": "/api/cache/stats",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9274,
+    "handler": "clear_cache",
+    "path": "/api/cache/clear",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9283,
+    "handler": "get_telemetry",
+    "path": "/api/telemetry",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9292,
+    "handler": "list_processes",
+    "path": "/api/processes/list",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9318,
+    "handler": "get_process_status",
+    "path": "/api/processes/status/<int:pid>",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9349,
+    "handler": "terminate_process",
+    "path": "/api/processes/terminate/<int:pid>",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9371,
+    "handler": "pause_process",
+    "path": "/api/processes/pause/<int:pid>",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9393,
+    "handler": "resume_process",
+    "path": "/api/processes/resume/<int:pid>",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9415,
+    "handler": "process_dashboard",
+    "path": "/api/processes/dashboard",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9468,
+    "handler": "create_vulnerability_card",
+    "path": "/api/visual/vulnerability-card",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9489,
+    "handler": "create_summary_report",
+    "path": "/api/visual/summary-report",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9511,
+    "handler": "format_tool_output",
+    "path": "/api/visual/tool-output",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9540,
+    "handler": "analyze_target",
+    "path": "/api/intelligence/analyze-target",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9567,
+    "handler": "select_optimal_tools",
+    "path": "/api/intelligence/select-tools",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9602,
+    "handler": "optimize_tool_parameters",
+    "path": "/api/intelligence/optimize-parameters",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9638,
+    "handler": "create_attack_chain",
+    "path": "/api/intelligence/create-attack-chain",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 9673,
+    "handler": "intelligent_smart_scan",
+    "path": "/api/intelligence/smart-scan",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10042,
+    "handler": "detect_technologies",
+    "path": "/api/intelligence/technology-detection",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10099,
+    "handler": "create_reconnaissance_workflow",
+    "path": "/api/bugbounty/reconnaissance-workflow",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10137,
+    "handler": "create_vulnerability_hunting_workflow",
+    "path": "/api/bugbounty/vulnerability-hunting-workflow",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10173,
+    "handler": "create_business_logic_workflow",
+    "path": "/api/bugbounty/business-logic-workflow",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10204,
+    "handler": "create_osint_workflow",
+    "path": "/api/bugbounty/osint-workflow",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10234,
+    "handler": "create_file_upload_testing",
+    "path": "/api/bugbounty/file-upload-testing",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10265,
+    "handler": "create_comprehensive_bugbounty_assessment",
+    "path": "/api/bugbounty/comprehensive-assessment",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10328,
+    "handler": "nmap",
+    "path": "/api/tools/nmap",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 10332
+      },
+      {
+        "key": "'scan_type'",
+        "default": "'-sCV'",
+        "line": 10333
+      },
+      {
+        "key": "'ports'",
+        "default": "''",
+        "line": 10334
+      },
+      {
+        "key": "'additional_args'",
+        "default": "'-T4 -Pn'",
+        "line": 10335
+      },
+      {
+        "key": "'use_recovery'",
+        "default": "True",
+        "line": 10336
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10378,
+    "handler": "gobuster",
+    "path": "/api/tools/gobuster",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 10382
+      },
+      {
+        "key": "'mode'",
+        "default": "'dir'",
+        "line": 10383
+      },
+      {
+        "key": "'wordlist'",
+        "default": "'/usr/share/wordlists/dirb/common.txt'",
+        "line": 10384
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10385
+      },
+      {
+        "key": "'use_recovery'",
+        "default": "True",
+        "line": 10386
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10430,
+    "handler": "nuclei",
+    "path": "/api/tools/nuclei",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 10434
+      },
+      {
+        "key": "'severity'",
+        "default": "''",
+        "line": 10435
+      },
+      {
+        "key": "'tags'",
+        "default": "''",
+        "line": 10436
+      },
+      {
+        "key": "'template'",
+        "default": "''",
+        "line": 10437
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10438
+      },
+      {
+        "key": "'use_recovery'",
+        "default": "True",
+        "line": 10439
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10490,
+    "handler": "prowler",
+    "path": "/api/tools/prowler",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'provider'",
+        "default": "'aws'",
+        "line": 10494
+      },
+      {
+        "key": "'profile'",
+        "default": "'default'",
+        "line": 10495
+      },
+      {
+        "key": "'region'",
+        "default": "''",
+        "line": 10496
+      },
+      {
+        "key": "'checks'",
+        "default": "''",
+        "line": 10497
+      },
+      {
+        "key": "'output_dir'",
+        "default": "'/tmp/prowler_output'",
+        "line": 10498
+      },
+      {
+        "key": "'output_format'",
+        "default": "'json'",
+        "line": 10499
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10500
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10534,
+    "handler": "trivy",
+    "path": "/api/tools/trivy",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'scan_type'",
+        "default": "'image'",
+        "line": 10538
+      },
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 10539
+      },
+      {
+        "key": "'output_format'",
+        "default": "'json'",
+        "line": 10540
+      },
+      {
+        "key": "'severity'",
+        "default": "''",
+        "line": 10541
+      },
+      {
+        "key": "'output_file'",
+        "default": "''",
+        "line": 10542
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10543
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10582,
+    "handler": "scout_suite",
+    "path": "/api/tools/scout-suite",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'provider'",
+        "default": "'aws'",
+        "line": 10586
+      },
+      {
+        "key": "'profile'",
+        "default": "'default'",
+        "line": 10587
+      },
+      {
+        "key": "'report_dir'",
+        "default": "'/tmp/scout-suite'",
+        "line": 10588
+      },
+      {
+        "key": "'services'",
+        "default": "''",
+        "line": 10589
+      },
+      {
+        "key": "'exceptions'",
+        "default": "''",
+        "line": 10590
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10591
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10622,
+    "handler": "cloudmapper",
+    "path": "/api/tools/cloudmapper",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'action'",
+        "default": "'collect'",
+        "line": 10626
+      },
+      {
+        "key": "'account'",
+        "default": "''",
+        "line": 10627
+      },
+      {
+        "key": "'config'",
+        "default": "'config.json'",
+        "line": 10628
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10629
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10655,
+    "handler": "pacu",
+    "path": "/api/tools/pacu",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'session_name'",
+        "default": "'hexstrike_session'",
+        "line": 10659
+      },
+      {
+        "key": "'modules'",
+        "default": "''",
+        "line": 10660
+      },
+      {
+        "key": "'data_services'",
+        "default": "''",
+        "line": 10661
+      },
+      {
+        "key": "'regions'",
+        "default": "''",
+        "line": 10662
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10663
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10707,
+    "handler": "kube_hunter",
+    "path": "/api/tools/kube-hunter",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 10711
+      },
+      {
+        "key": "'remote'",
+        "default": "''",
+        "line": 10712
+      },
+      {
+        "key": "'cidr'",
+        "default": "''",
+        "line": 10713
+      },
+      {
+        "key": "'interface'",
+        "default": "''",
+        "line": 10714
+      },
+      {
+        "key": "'active'",
+        "default": "False",
+        "line": 10715
+      },
+      {
+        "key": "'report'",
+        "default": "'json'",
+        "line": 10716
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10717
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10751,
+    "handler": "kube_bench",
+    "path": "/api/tools/kube-bench",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'targets'",
+        "default": "''",
+        "line": 10755
+      },
+      {
+        "key": "'version'",
+        "default": "''",
+        "line": 10756
+      },
+      {
+        "key": "'config_dir'",
+        "default": "''",
+        "line": 10757
+      },
+      {
+        "key": "'output_format'",
+        "default": "'json'",
+        "line": 10758
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10759
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10787,
+    "handler": "docker_bench_security",
+    "path": "/api/tools/docker-bench-security",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'checks'",
+        "default": "''",
+        "line": 10791
+      },
+      {
+        "key": "'exclude'",
+        "default": "''",
+        "line": 10792
+      },
+      {
+        "key": "'output_file'",
+        "default": "'/tmp/docker-bench-results.json'",
+        "line": 10793
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10794
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10820,
+    "handler": "clair",
+    "path": "/api/tools/clair",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'image'",
+        "default": "''",
+        "line": 10824
+      },
+      {
+        "key": "'config'",
+        "default": "'/etc/clair/config.yaml'",
+        "line": 10825
+      },
+      {
+        "key": "'output_format'",
+        "default": "'json'",
+        "line": 10826
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10827
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10854,
+    "handler": "falco",
+    "path": "/api/tools/falco",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'config_file'",
+        "default": "'/etc/falco/falco.yaml'",
+        "line": 10858
+      },
+      {
+        "key": "'rules_file'",
+        "default": "''",
+        "line": 10859
+      },
+      {
+        "key": "'output_format'",
+        "default": "'json'",
+        "line": 10860
+      },
+      {
+        "key": "'duration'",
+        "default": "60",
+        "line": 10861
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10862
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10887,
+    "handler": "checkov",
+    "path": "/api/tools/checkov",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'directory'",
+        "default": "'.'",
+        "line": 10891
+      },
+      {
+        "key": "'framework'",
+        "default": "''",
+        "line": 10892
+      },
+      {
+        "key": "'check'",
+        "default": "''",
+        "line": 10893
+      },
+      {
+        "key": "'skip_check'",
+        "default": "''",
+        "line": 10894
+      },
+      {
+        "key": "'output_format'",
+        "default": "'json'",
+        "line": 10895
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10896
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10924,
+    "handler": "terrascan",
+    "path": "/api/tools/terrascan",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'scan_type'",
+        "default": "'all'",
+        "line": 10928
+      },
+      {
+        "key": "'iac_dir'",
+        "default": "'.'",
+        "line": 10929
+      },
+      {
+        "key": "'policy_type'",
+        "default": "''",
+        "line": 10930
+      },
+      {
+        "key": "'output_format'",
+        "default": "'json'",
+        "line": 10931
+      },
+      {
+        "key": "'severity'",
+        "default": "''",
+        "line": 10932
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10933
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10958,
+    "handler": "dirb",
+    "path": "/api/tools/dirb",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 10962
+      },
+      {
+        "key": "'wordlist'",
+        "default": "'/usr/share/wordlists/dirb/common.txt'",
+        "line": 10963
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10964
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 10988,
+    "handler": "nikto",
+    "path": "/api/tools/nikto",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 10992
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 10993
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11017,
+    "handler": "sqlmap",
+    "path": "/api/tools/sqlmap",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 11021
+      },
+      {
+        "key": "'data'",
+        "default": "''",
+        "line": 11022
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11023
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11050,
+    "handler": "metasploit",
+    "path": "/api/tools/metasploit",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'module'",
+        "default": "''",
+        "line": 11054
+      },
+      {
+        "key": "'options'",
+        "default": "{}",
+        "line": 11055
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11094,
+    "handler": "hydra",
+    "path": "/api/tools/hydra",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 11098
+      },
+      {
+        "key": "'service'",
+        "default": "''",
+        "line": 11099
+      },
+      {
+        "key": "'username'",
+        "default": "''",
+        "line": 11100
+      },
+      {
+        "key": "'username_file'",
+        "default": "''",
+        "line": 11101
+      },
+      {
+        "key": "'password'",
+        "default": "''",
+        "line": 11102
+      },
+      {
+        "key": "'password_file'",
+        "default": "''",
+        "line": 11103
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11104
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11146,
+    "handler": "john",
+    "path": "/api/tools/john",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'hash_file'",
+        "default": "''",
+        "line": 11150
+      },
+      {
+        "key": "'wordlist'",
+        "default": "'/usr/share/wordlists/rockyou.txt'",
+        "line": 11151
+      },
+      {
+        "key": "'format'",
+        "default": "''",
+        "line": 11152
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11153
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11185,
+    "handler": "wpscan",
+    "path": "/api/tools/wpscan",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 11189
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11190
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11214,
+    "handler": "enum4linux",
+    "path": "/api/tools/enum4linux",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 11218
+      },
+      {
+        "key": "'additional_args'",
+        "default": "'-a'",
+        "line": 11219
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11240,
+    "handler": "ffuf",
+    "path": "/api/tools/ffuf",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 11244
+      },
+      {
+        "key": "'wordlist'",
+        "default": "'/usr/share/wordlists/dirb/common.txt'",
+        "line": 11245
+      },
+      {
+        "key": "'mode'",
+        "default": "'directory'",
+        "line": 11246
+      },
+      {
+        "key": "'match_codes'",
+        "default": "'200,204,301,302,307,401,403'",
+        "line": 11247
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11248
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11283,
+    "handler": "netexec",
+    "path": "/api/tools/netexec",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 11287
+      },
+      {
+        "key": "'protocol'",
+        "default": "'smb'",
+        "line": 11288
+      },
+      {
+        "key": "'username'",
+        "default": "''",
+        "line": 11289
+      },
+      {
+        "key": "'password'",
+        "default": "''",
+        "line": 11290
+      },
+      {
+        "key": "'hash'",
+        "default": "''",
+        "line": 11291
+      },
+      {
+        "key": "'module'",
+        "default": "''",
+        "line": 11292
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11293
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11329,
+    "handler": "amass",
+    "path": "/api/tools/amass",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'domain'",
+        "default": "''",
+        "line": 11333
+      },
+      {
+        "key": "'mode'",
+        "default": "'enum'",
+        "line": 11334
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11335
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11364,
+    "handler": "hashcat",
+    "path": "/api/tools/hashcat",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'hash_file'",
+        "default": "''",
+        "line": 11368
+      },
+      {
+        "key": "'hash_type'",
+        "default": "''",
+        "line": 11369
+      },
+      {
+        "key": "'attack_mode'",
+        "default": "'0'",
+        "line": 11370
+      },
+      {
+        "key": "'wordlist'",
+        "default": "'/usr/share/wordlists/rockyou.txt'",
+        "line": 11371
+      },
+      {
+        "key": "'mask'",
+        "default": "''",
+        "line": 11372
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11373
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11408,
+    "handler": "subfinder",
+    "path": "/api/tools/subfinder",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'domain'",
+        "default": "''",
+        "line": 11412
+      },
+      {
+        "key": "'silent'",
+        "default": "True",
+        "line": 11413
+      },
+      {
+        "key": "'all_sources'",
+        "default": "False",
+        "line": 11414
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11415
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11445,
+    "handler": "smbmap",
+    "path": "/api/tools/smbmap",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 11449
+      },
+      {
+        "key": "'username'",
+        "default": "''",
+        "line": 11450
+      },
+      {
+        "key": "'password'",
+        "default": "''",
+        "line": 11451
+      },
+      {
+        "key": "'domain'",
+        "default": "''",
+        "line": 11452
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11453
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11490,
+    "handler": "rustscan",
+    "path": "/api/tools/rustscan",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 11494
+      },
+      {
+        "key": "'ports'",
+        "default": "''",
+        "line": 11495
+      },
+      {
+        "key": "'ulimit'",
+        "default": "5000",
+        "line": 11496
+      },
+      {
+        "key": "'batch_size'",
+        "default": "4500",
+        "line": 11497
+      },
+      {
+        "key": "'timeout'",
+        "default": "1500",
+        "line": 11498
+      },
+      {
+        "key": "'scripts'",
+        "default": "''",
+        "line": 11499
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11500
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11526,
+    "handler": "masscan",
+    "path": "/api/tools/masscan",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 11530
+      },
+      {
+        "key": "'ports'",
+        "default": "'1-65535'",
+        "line": 11531
+      },
+      {
+        "key": "'rate'",
+        "default": "1000",
+        "line": 11532
+      },
+      {
+        "key": "'interface'",
+        "default": "''",
+        "line": 11533
+      },
+      {
+        "key": "'router_mac'",
+        "default": "''",
+        "line": 11534
+      },
+      {
+        "key": "'source_ip'",
+        "default": "''",
+        "line": 11535
+      },
+      {
+        "key": "'banners'",
+        "default": "False",
+        "line": 11536
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11537
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11569,
+    "handler": "nmap_advanced",
+    "path": "/api/tools/nmap-advanced",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 11573
+      },
+      {
+        "key": "'scan_type'",
+        "default": "'-sS'",
+        "line": 11574
+      },
+      {
+        "key": "'ports'",
+        "default": "''",
+        "line": 11575
+      },
+      {
+        "key": "'timing'",
+        "default": "'T4'",
+        "line": 11576
+      },
+      {
+        "key": "'nse_scripts'",
+        "default": "''",
+        "line": 11577
+      },
+      {
+        "key": "'os_detection'",
+        "default": "False",
+        "line": 11578
+      },
+      {
+        "key": "'version_detection'",
+        "default": "False",
+        "line": 11579
+      },
+      {
+        "key": "'aggressive'",
+        "default": "False",
+        "line": 11580
+      },
+      {
+        "key": "'stealth'",
+        "default": "False",
+        "line": 11581
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11582
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11624,
+    "handler": "autorecon",
+    "path": "/api/tools/autorecon",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 11628
+      },
+      {
+        "key": "'output_dir'",
+        "default": "'/tmp/autorecon'",
+        "line": 11629
+      },
+      {
+        "key": "'port_scans'",
+        "default": "'top-100-ports'",
+        "line": 11630
+      },
+      {
+        "key": "'service_scans'",
+        "default": "'default'",
+        "line": 11631
+      },
+      {
+        "key": "'heartbeat'",
+        "default": "60",
+        "line": 11632
+      },
+      {
+        "key": "'timeout'",
+        "default": "300",
+        "line": 11633
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11634
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11660,
+    "handler": "enum4linux_ng",
+    "path": "/api/tools/enum4linux-ng",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 11664
+      },
+      {
+        "key": "'username'",
+        "default": "''",
+        "line": 11665
+      },
+      {
+        "key": "'password'",
+        "default": "''",
+        "line": 11666
+      },
+      {
+        "key": "'domain'",
+        "default": "''",
+        "line": 11667
+      },
+      {
+        "key": "'shares'",
+        "default": "True",
+        "line": 11668
+      },
+      {
+        "key": "'users'",
+        "default": "True",
+        "line": 11669
+      },
+      {
+        "key": "'groups'",
+        "default": "True",
+        "line": 11670
+      },
+      {
+        "key": "'policy'",
+        "default": "True",
+        "line": 11671
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11672
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11715,
+    "handler": "rpcclient",
+    "path": "/api/tools/rpcclient",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 11719
+      },
+      {
+        "key": "'username'",
+        "default": "''",
+        "line": 11720
+      },
+      {
+        "key": "'password'",
+        "default": "''",
+        "line": 11721
+      },
+      {
+        "key": "'domain'",
+        "default": "''",
+        "line": 11722
+      },
+      {
+        "key": "'commands'",
+        "default": "'enumdomusers;enumdomgroups;querydominfo'",
+        "line": 11723
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11724
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11759,
+    "handler": "nbtscan",
+    "path": "/api/tools/nbtscan",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 11763
+      },
+      {
+        "key": "'verbose'",
+        "default": "False",
+        "line": 11764
+      },
+      {
+        "key": "'timeout'",
+        "default": "2",
+        "line": 11765
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11766
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11791,
+    "handler": "arp_scan",
+    "path": "/api/tools/arp-scan",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 11795
+      },
+      {
+        "key": "'interface'",
+        "default": "''",
+        "line": 11796
+      },
+      {
+        "key": "'local_network'",
+        "default": "False",
+        "line": 11797
+      },
+      {
+        "key": "'timeout'",
+        "default": "500",
+        "line": 11798
+      },
+      {
+        "key": "'retry'",
+        "default": "3",
+        "line": 11799
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11800
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11828,
+    "handler": "responder",
+    "path": "/api/tools/responder",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'interface'",
+        "default": "'eth0'",
+        "line": 11832
+      },
+      {
+        "key": "'analyze'",
+        "default": "False",
+        "line": 11833
+      },
+      {
+        "key": "'wpad'",
+        "default": "True",
+        "line": 11834
+      },
+      {
+        "key": "'force_wpad_auth'",
+        "default": "False",
+        "line": 11835
+      },
+      {
+        "key": "'fingerprint'",
+        "default": "False",
+        "line": 11836
+      },
+      {
+        "key": "'duration'",
+        "default": "300",
+        "line": 11837
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11838
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11870,
+    "handler": "volatility",
+    "path": "/api/tools/volatility",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'memory_file'",
+        "default": "''",
+        "line": 11874
+      },
+      {
+        "key": "'plugin'",
+        "default": "''",
+        "line": 11875
+      },
+      {
+        "key": "'profile'",
+        "default": "''",
+        "line": 11876
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11877
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11912,
+    "handler": "msfvenom",
+    "path": "/api/tools/msfvenom",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'payload'",
+        "default": "''",
+        "line": 11916
+      },
+      {
+        "key": "'format'",
+        "default": "''",
+        "line": 11917
+      },
+      {
+        "key": "'output_file'",
+        "default": "''",
+        "line": 11918
+      },
+      {
+        "key": "'encoder'",
+        "default": "''",
+        "line": 11919
+      },
+      {
+        "key": "'iterations'",
+        "default": "''",
+        "line": 11920
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11921
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 11961,
+    "handler": "gdb",
+    "path": "/api/tools/gdb",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'binary'",
+        "default": "''",
+        "line": 11965
+      },
+      {
+        "key": "'commands'",
+        "default": "''",
+        "line": 11966
+      },
+      {
+        "key": "'script_file'",
+        "default": "''",
+        "line": 11967
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 11968
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12010,
+    "handler": "radare2",
+    "path": "/api/tools/radare2",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'binary'",
+        "default": "''",
+        "line": 12014
+      },
+      {
+        "key": "'commands'",
+        "default": "''",
+        "line": 12015
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12016
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12053,
+    "handler": "binwalk",
+    "path": "/api/tools/binwalk",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'file_path'",
+        "default": "''",
+        "line": 12057
+      },
+      {
+        "key": "'extract'",
+        "default": "False",
+        "line": 12058
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12059
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12088,
+    "handler": "ropgadget",
+    "path": "/api/tools/ropgadget",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'binary'",
+        "default": "''",
+        "line": 12092
+      },
+      {
+        "key": "'gadget_type'",
+        "default": "''",
+        "line": 12093
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12094
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12121,
+    "handler": "checksec",
+    "path": "/api/tools/checksec",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'binary'",
+        "default": "''",
+        "line": 12125
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12146,
+    "handler": "xxd",
+    "path": "/api/tools/xxd",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'file_path'",
+        "default": "''",
+        "line": 12150
+      },
+      {
+        "key": "'offset'",
+        "default": "'0'",
+        "line": 12151
+      },
+      {
+        "key": "'length'",
+        "default": "''",
+        "line": 12152
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12153
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12182,
+    "handler": "strings",
+    "path": "/api/tools/strings",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'file_path'",
+        "default": "''",
+        "line": 12186
+      },
+      {
+        "key": "'min_len'",
+        "default": "4",
+        "line": 12187
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12188
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12214,
+    "handler": "objdump",
+    "path": "/api/tools/objdump",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'binary'",
+        "default": "''",
+        "line": 12218
+      },
+      {
+        "key": "'disassemble'",
+        "default": "True",
+        "line": 12219
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12220
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12255,
+    "handler": "ghidra",
+    "path": "/api/tools/ghidra",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'binary'",
+        "default": "''",
+        "line": 12259
+      },
+      {
+        "key": "'project_name'",
+        "default": "'hexstrike_analysis'",
+        "line": 12260
+      },
+      {
+        "key": "'script_file'",
+        "default": "''",
+        "line": 12261
+      },
+      {
+        "key": "'analysis_timeout'",
+        "default": "300",
+        "line": 12262
+      },
+      {
+        "key": "'output_format'",
+        "default": "'xml'",
+        "line": 12263
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12264
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12295,
+    "handler": "pwntools",
+    "path": "/api/tools/pwntools",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'script_content'",
+        "default": "''",
+        "line": 12299
+      },
+      {
+        "key": "'target_binary'",
+        "default": "''",
+        "line": 12300
+      },
+      {
+        "key": "'target_host'",
+        "default": "''",
+        "line": 12301
+      },
+      {
+        "key": "'target_port'",
+        "default": "0",
+        "line": 12302
+      },
+      {
+        "key": "'exploit_type'",
+        "default": "'local'",
+        "line": 12303
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12304
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12370,
+    "handler": "one_gadget",
+    "path": "/api/tools/one-gadget",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'libc_path'",
+        "default": "''",
+        "line": 12374
+      },
+      {
+        "key": "'level'",
+        "default": "1",
+        "line": 12375
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12376
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12396,
+    "handler": "libc_database",
+    "path": "/api/tools/libc-database",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'action'",
+        "default": "'find'",
+        "line": 12400
+      },
+      {
+        "key": "'symbols'",
+        "default": "''",
+        "line": 12401
+      },
+      {
+        "key": "'libc_id'",
+        "default": "''",
+        "line": 12402
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12403
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12437,
+    "handler": "gdb_peda",
+    "path": "/api/tools/gdb-peda",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'binary'",
+        "default": "''",
+        "line": 12441
+      },
+      {
+        "key": "'commands'",
+        "default": "''",
+        "line": 12442
+      },
+      {
+        "key": "'attach_pid'",
+        "default": "0",
+        "line": 12443
+      },
+      {
+        "key": "'core_file'",
+        "default": "''",
+        "line": 12444
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12445
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12499,
+    "handler": "angr",
+    "path": "/api/tools/angr",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'binary'",
+        "default": "''",
+        "line": 12503
+      },
+      {
+        "key": "'script_content'",
+        "default": "''",
+        "line": 12504
+      },
+      {
+        "key": "'find_address'",
+        "default": "''",
+        "line": 12505
+      },
+      {
+        "key": "'avoid_addresses'",
+        "default": "''",
+        "line": 12506
+      },
+      {
+        "key": "'analysis_type'",
+        "default": "'symbolic'",
+        "line": 12507
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12508
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12590,
+    "handler": "ropper",
+    "path": "/api/tools/ropper",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'binary'",
+        "default": "''",
+        "line": 12594
+      },
+      {
+        "key": "'gadget_type'",
+        "default": "'rop'",
+        "line": 12595
+      },
+      {
+        "key": "'quality'",
+        "default": "1",
+        "line": 12596
+      },
+      {
+        "key": "'arch'",
+        "default": "''",
+        "line": 12597
+      },
+      {
+        "key": "'search_string'",
+        "default": "''",
+        "line": 12598
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12599
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12637,
+    "handler": "pwninit",
+    "path": "/api/tools/pwninit",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'binary'",
+        "default": "''",
+        "line": 12641
+      },
+      {
+        "key": "'libc'",
+        "default": "''",
+        "line": 12642
+      },
+      {
+        "key": "'ld'",
+        "default": "''",
+        "line": 12643
+      },
+      {
+        "key": "'template_type'",
+        "default": "'python'",
+        "line": 12644
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12645
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12678,
+    "handler": "feroxbuster",
+    "path": "/api/tools/feroxbuster",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 12682
+      },
+      {
+        "key": "'wordlist'",
+        "default": "'/usr/share/wordlists/dirb/common.txt'",
+        "line": 12683
+      },
+      {
+        "key": "'threads'",
+        "default": "10",
+        "line": 12684
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12685
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12709,
+    "handler": "dotdotpwn",
+    "path": "/api/tools/dotdotpwn",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 12713
+      },
+      {
+        "key": "'module'",
+        "default": "'http'",
+        "line": 12714
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12715
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12741,
+    "handler": "xsser",
+    "path": "/api/tools/xsser",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 12745
+      },
+      {
+        "key": "'params'",
+        "default": "''",
+        "line": 12746
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12747
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12774,
+    "handler": "wfuzz",
+    "path": "/api/tools/wfuzz",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 12778
+      },
+      {
+        "key": "'wordlist'",
+        "default": "'/usr/share/wordlists/dirb/common.txt'",
+        "line": 12779
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12780
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12808,
+    "handler": "dirsearch",
+    "path": "/api/tools/dirsearch",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 12812
+      },
+      {
+        "key": "'extensions'",
+        "default": "'php,html,js,txt,xml,json'",
+        "line": 12813
+      },
+      {
+        "key": "'wordlist'",
+        "default": "'/usr/share/wordlists/dirsearch/common.txt'",
+        "line": 12814
+      },
+      {
+        "key": "'threads'",
+        "default": "30",
+        "line": 12815
+      },
+      {
+        "key": "'recursive'",
+        "default": "False",
+        "line": 12816
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12817
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12840,
+    "handler": "katana",
+    "path": "/api/tools/katana",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 12844
+      },
+      {
+        "key": "'depth'",
+        "default": "3",
+        "line": 12845
+      },
+      {
+        "key": "'js_crawl'",
+        "default": "True",
+        "line": 12846
+      },
+      {
+        "key": "'form_extraction'",
+        "default": "True",
+        "line": 12847
+      },
+      {
+        "key": "'output_format'",
+        "default": "'json'",
+        "line": 12848
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12849
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12878,
+    "handler": "gau",
+    "path": "/api/tools/gau",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'domain'",
+        "default": "''",
+        "line": 12882
+      },
+      {
+        "key": "'providers'",
+        "default": "'wayback,commoncrawl,otx,urlscan'",
+        "line": 12883
+      },
+      {
+        "key": "'include_subs'",
+        "default": "True",
+        "line": 12884
+      },
+      {
+        "key": "'blacklist'",
+        "default": "'png,jpg,gif,jpeg,swf,woff,svg,pdf,css,ico'",
+        "line": 12885
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12886
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12915,
+    "handler": "waybackurls",
+    "path": "/api/tools/waybackurls",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'domain'",
+        "default": "''",
+        "line": 12919
+      },
+      {
+        "key": "'get_versions'",
+        "default": "False",
+        "line": 12920
+      },
+      {
+        "key": "'no_subs'",
+        "default": "False",
+        "line": 12921
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12922
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12948,
+    "handler": "arjun",
+    "path": "/api/tools/arjun",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 12952
+      },
+      {
+        "key": "'method'",
+        "default": "'GET'",
+        "line": 12953
+      },
+      {
+        "key": "'wordlist'",
+        "default": "''",
+        "line": 12954
+      },
+      {
+        "key": "'delay'",
+        "default": "0",
+        "line": 12955
+      },
+      {
+        "key": "'threads'",
+        "default": "25",
+        "line": 12956
+      },
+      {
+        "key": "'stable'",
+        "default": "False",
+        "line": 12957
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12958
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 12987,
+    "handler": "paramspider",
+    "path": "/api/tools/paramspider",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'domain'",
+        "default": "''",
+        "line": 12991
+      },
+      {
+        "key": "'level'",
+        "default": "2",
+        "line": 12992
+      },
+      {
+        "key": "'exclude'",
+        "default": "'png,jpg,gif,jpeg,swf,woff,svg,pdf,css,ico'",
+        "line": 12993
+      },
+      {
+        "key": "'output'",
+        "default": "''",
+        "line": 12994
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 12995
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 13021,
+    "handler": "x8",
+    "path": "/api/tools/x8",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 13025
+      },
+      {
+        "key": "'wordlist'",
+        "default": "'/usr/share/wordlists/x8/params.txt'",
+        "line": 13026
+      },
+      {
+        "key": "'method'",
+        "default": "'GET'",
+        "line": 13027
+      },
+      {
+        "key": "'body'",
+        "default": "''",
+        "line": 13028
+      },
+      {
+        "key": "'headers'",
+        "default": "''",
+        "line": 13029
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 13030
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 13056,
+    "handler": "jaeles",
+    "path": "/api/tools/jaeles",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 13060
+      },
+      {
+        "key": "'signatures'",
+        "default": "''",
+        "line": 13061
+      },
+      {
+        "key": "'config'",
+        "default": "''",
+        "line": 13062
+      },
+      {
+        "key": "'threads'",
+        "default": "20",
+        "line": 13063
+      },
+      {
+        "key": "'timeout'",
+        "default": "20",
+        "line": 13064
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 13065
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 13091,
+    "handler": "dalfox",
+    "path": "/api/tools/dalfox",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 13095
+      },
+      {
+        "key": "'pipe_mode'",
+        "default": "False",
+        "line": 13096
+      },
+      {
+        "key": "'blind'",
+        "default": "False",
+        "line": 13097
+      },
+      {
+        "key": "'mining_dom'",
+        "default": "True",
+        "line": 13098
+      },
+      {
+        "key": "'mining_dict'",
+        "default": "True",
+        "line": 13099
+      },
+      {
+        "key": "'custom_payload'",
+        "default": "''",
+        "line": 13100
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 13101
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 13136,
+    "handler": "httpx",
+    "path": "/api/tools/httpx",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 13140
+      },
+      {
+        "key": "'probe'",
+        "default": "True",
+        "line": 13141
+      },
+      {
+        "key": "'tech_detect'",
+        "default": "False",
+        "line": 13142
+      },
+      {
+        "key": "'status_code'",
+        "default": "False",
+        "line": 13143
+      },
+      {
+        "key": "'content_length'",
+        "default": "False",
+        "line": 13144
+      },
+      {
+        "key": "'title'",
+        "default": "False",
+        "line": 13145
+      },
+      {
+        "key": "'web_server'",
+        "default": "False",
+        "line": 13146
+      },
+      {
+        "key": "'threads'",
+        "default": "50",
+        "line": 13147
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 13148
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 13186,
+    "handler": "anew",
+    "path": "/api/tools/anew",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'input_data'",
+        "default": "''",
+        "line": 13190
+      },
+      {
+        "key": "'output_file'",
+        "default": "''",
+        "line": 13191
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 13192
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 13215,
+    "handler": "qsreplace",
+    "path": "/api/tools/qsreplace",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'urls'",
+        "default": "''",
+        "line": 13219
+      },
+      {
+        "key": "'replacement'",
+        "default": "'FUZZ'",
+        "line": 13220
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 13221
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 13241,
+    "handler": "uro",
+    "path": "/api/tools/uro",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'urls'",
+        "default": "''",
+        "line": 13245
+      },
+      {
+        "key": "'whitelist'",
+        "default": "''",
+        "line": 13246
+      },
+      {
+        "key": "'blacklist'",
+        "default": "''",
+        "line": 13247
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 13248
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14040,
+    "handler": "http_framework_endpoint",
+    "path": "/api/tools/http-framework",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'action'",
+        "default": "'request'",
+        "line": 14044
+      },
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 14045
+      },
+      {
+        "key": "'method'",
+        "default": "'GET'",
+        "line": 14046
+      },
+      {
+        "key": "'data'",
+        "default": "{}",
+        "line": 14047
+      },
+      {
+        "key": "'headers'",
+        "default": "{}",
+        "line": 14048
+      },
+      {
+        "key": "'cookies'",
+        "default": "{}",
+        "line": 14049
+      },
+      {
+        "key": "'max_depth'",
+        "default": "3",
+        "line": 14072
+      },
+      {
+        "key": "'max_pages'",
+        "default": "100",
+        "line": 14073
+      },
+      {
+        "key": "'rules'",
+        "default": "[]",
+        "line": 14097
+      },
+      {
+        "key": "'host'",
+        "default": null,
+        "line": 14102
+      },
+      {
+        "key": "'include_subdomains'",
+        "default": "True",
+        "line": 14103
+      },
+      {
+        "key": "'request'",
+        "default": null,
+        "line": 14110
+      },
+      {
+        "key": "'method'",
+        "default": "'GET'",
+        "line": 14117
+      },
+      {
+        "key": "'location'",
+        "default": "'query'",
+        "line": 14118
+      },
+      {
+        "key": "'params'",
+        "default": "[]",
+        "line": 14119
+      },
+      {
+        "key": "'payloads'",
+        "default": "[]",
+        "line": 14120
+      },
+      {
+        "key": "'base_data'",
+        "default": "{}",
+        "line": 14121
+      },
+      {
+        "key": "'max_requests'",
+        "default": "100",
+        "line": 14122
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14136,
+    "handler": "browser_agent_endpoint",
+    "path": "/api/tools/browser-agent",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'action'",
+        "default": "'navigate'",
+        "line": 14140
+      },
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 14141
+      },
+      {
+        "key": "'headless'",
+        "default": "True",
+        "line": 14142
+      },
+      {
+        "key": "'wait_time'",
+        "default": "5",
+        "line": 14143
+      },
+      {
+        "key": "'proxy_port'",
+        "default": null,
+        "line": 14144
+      },
+      {
+        "key": "'active_tests'",
+        "default": "False",
+        "line": 14145
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14225,
+    "handler": "burpsuite_alternative",
+    "path": "/api/tools/burpsuite-alternative",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 14229
+      },
+      {
+        "key": "'scan_type'",
+        "default": "'comprehensive'",
+        "line": 14230
+      },
+      {
+        "key": "'headless'",
+        "default": "True",
+        "line": 14231
+      },
+      {
+        "key": "'max_depth'",
+        "default": "3",
+        "line": 14232
+      },
+      {
+        "key": "'max_pages'",
+        "default": "50",
+        "line": 14233
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14319,
+    "handler": "zap",
+    "path": "/api/tools/zap",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 14323
+      },
+      {
+        "key": "'scan_type'",
+        "default": "'baseline'",
+        "line": 14324
+      },
+      {
+        "key": "'api_key'",
+        "default": "''",
+        "line": 14325
+      },
+      {
+        "key": "'daemon'",
+        "default": "False",
+        "line": 14326
+      },
+      {
+        "key": "'port'",
+        "default": "'8090'",
+        "line": 14327
+      },
+      {
+        "key": "'host'",
+        "default": "'0.0.0.0'",
+        "line": 14328
+      },
+      {
+        "key": "'format'",
+        "default": "'xml'",
+        "line": 14329
+      },
+      {
+        "key": "'output_file'",
+        "default": "''",
+        "line": 14330
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 14331
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14369,
+    "handler": "wafw00f",
+    "path": "/api/tools/wafw00f",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 14373
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 14374
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14398,
+    "handler": "fierce",
+    "path": "/api/tools/fierce",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'domain'",
+        "default": "''",
+        "line": 14402
+      },
+      {
+        "key": "'dns_server'",
+        "default": "''",
+        "line": 14403
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 14404
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14431,
+    "handler": "dnsenum",
+    "path": "/api/tools/dnsenum",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'domain'",
+        "default": "''",
+        "line": 14435
+      },
+      {
+        "key": "'dns_server'",
+        "default": "''",
+        "line": 14436
+      },
+      {
+        "key": "'wordlist'",
+        "default": "''",
+        "line": 14437
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 14438
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14469,
+    "handler": "install_python_package",
+    "path": "/api/python/install",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'package'",
+        "default": "''",
+        "line": 14473
+      },
+      {
+        "key": "'env_name'",
+        "default": "'default'",
+        "line": 14474
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14499,
+    "handler": "execute_python_script",
+    "path": "/api/python/execute",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'script'",
+        "default": "''",
+        "line": 14503
+      },
+      {
+        "key": "'env_name'",
+        "default": "'default'",
+        "line": 14504
+      },
+      {
+        "key": "'filename'",
+        "default": "f'script_{int(time.time())}.py'",
+        "line": 14505
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14750,
+    "handler": "ai_generate_payload",
+    "path": "/api/ai/generate_payload",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'attack_type'",
+        "default": "'xss'",
+        "line": 14755
+      },
+      {
+        "key": "'complexity'",
+        "default": "'basic'",
+        "line": 14756
+      },
+      {
+        "key": "'technology'",
+        "default": "''",
+        "line": 14757
+      },
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 14758
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14780,
+    "handler": "ai_test_payload",
+    "path": "/api/ai/test_payload",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'payload'",
+        "default": "''",
+        "line": 14784
+      },
+      {
+        "key": "'target_url'",
+        "default": "''",
+        "line": 14785
+      },
+      {
+        "key": "'method'",
+        "default": "'GET'",
+        "line": 14786
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14842,
+    "handler": "api_fuzzer",
+    "path": "/api/tools/api_fuzzer",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'base_url'",
+        "default": "''",
+        "line": 14846
+      },
+      {
+        "key": "'endpoints'",
+        "default": "[]",
+        "line": 14847
+      },
+      {
+        "key": "'methods'",
+        "default": "['GET', 'POST', 'PUT', 'DELETE']",
+        "line": 14848
+      },
+      {
+        "key": "'wordlist'",
+        "default": "'/usr/share/wordlists/api/api-endpoints.txt'",
+        "line": 14849
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 14899,
+    "handler": "graphql_scanner",
+    "path": "/api/tools/graphql_scanner",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'endpoint'",
+        "default": "''",
+        "line": 14903
+      },
+      {
+        "key": "'introspection'",
+        "default": "True",
+        "line": 14904
+      },
+      {
+        "key": "'query_depth'",
+        "default": "10",
+        "line": 14905
+      },
+      {
+        "key": "'test_mutations'",
+        "default": "True",
+        "line": 14906
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15006,
+    "handler": "jwt_analyzer",
+    "path": "/api/tools/jwt_analyzer",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'jwt_token'",
+        "default": "''",
+        "line": 15010
+      },
+      {
+        "key": "'target_url'",
+        "default": "''",
+        "line": 15011
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15124,
+    "handler": "api_schema_analyzer",
+    "path": "/api/tools/api_schema_analyzer",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'schema_url'",
+        "default": "''",
+        "line": 15128
+      },
+      {
+        "key": "'schema_type'",
+        "default": "'openapi'",
+        "line": 15129
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15236,
+    "handler": "volatility3",
+    "path": "/api/tools/volatility3",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'memory_file'",
+        "default": "''",
+        "line": 15240
+      },
+      {
+        "key": "'plugin'",
+        "default": "''",
+        "line": 15241
+      },
+      {
+        "key": "'output_file'",
+        "default": "''",
+        "line": 15242
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 15243
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15276,
+    "handler": "foremost",
+    "path": "/api/tools/foremost",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'input_file'",
+        "default": "''",
+        "line": 15280
+      },
+      {
+        "key": "'output_dir'",
+        "default": "'/tmp/foremost_output'",
+        "line": 15281
+      },
+      {
+        "key": "'file_types'",
+        "default": "''",
+        "line": 15282
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 15283
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15316,
+    "handler": "steghide",
+    "path": "/api/tools/steghide",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'action'",
+        "default": "'extract'",
+        "line": 15320
+      },
+      {
+        "key": "'cover_file'",
+        "default": "''",
+        "line": 15321
+      },
+      {
+        "key": "'embed_file'",
+        "default": "''",
+        "line": 15322
+      },
+      {
+        "key": "'passphrase'",
+        "default": "''",
+        "line": 15323
+      },
+      {
+        "key": "'output_file'",
+        "default": "''",
+        "line": 15324
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 15325
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15365,
+    "handler": "exiftool",
+    "path": "/api/tools/exiftool",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'file_path'",
+        "default": "''",
+        "line": 15369
+      },
+      {
+        "key": "'output_format'",
+        "default": "''",
+        "line": 15370
+      },
+      {
+        "key": "'tags'",
+        "default": "''",
+        "line": 15371
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 15372
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15404,
+    "handler": "hashpump",
+    "path": "/api/tools/hashpump",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'signature'",
+        "default": "''",
+        "line": 15408
+      },
+      {
+        "key": "'data'",
+        "default": "''",
+        "line": 15409
+      },
+      {
+        "key": "'key_length'",
+        "default": "''",
+        "line": 15410
+      },
+      {
+        "key": "'append_data'",
+        "default": "''",
+        "line": 15411
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 15412
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15440,
+    "handler": "hakrawler",
+    "path": "/api/tools/hakrawler",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'url'",
+        "default": "''",
+        "line": 15454
+      },
+      {
+        "key": "'depth'",
+        "default": "2",
+        "line": 15455
+      },
+      {
+        "key": "'forms'",
+        "default": "True",
+        "line": 15456
+      },
+      {
+        "key": "'robots'",
+        "default": "True",
+        "line": 15457
+      },
+      {
+        "key": "'sitemap'",
+        "default": "True",
+        "line": 15458
+      },
+      {
+        "key": "'wayback'",
+        "default": "False",
+        "line": 15459
+      },
+      {
+        "key": "'additional_args'",
+        "default": "''",
+        "line": 15460
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15497,
+    "handler": "cve_monitor",
+    "path": "/api/vuln-intel/cve-monitor",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'hours'",
+        "default": "24",
+        "line": 15501
+      },
+      {
+        "key": "'severity_filter'",
+        "default": "'HIGH,CRITICAL'",
+        "line": 15502
+      },
+      {
+        "key": "'keywords'",
+        "default": "''",
+        "line": 15503
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15551,
+    "handler": "exploit_generate",
+    "path": "/api/vuln-intel/exploit-generate",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'cve_id'",
+        "default": "''",
+        "line": 15555
+      },
+      {
+        "key": "'target_os'",
+        "default": "''",
+        "line": 15556
+      },
+      {
+        "key": "'target_arch'",
+        "default": "'x64'",
+        "line": 15557
+      },
+      {
+        "key": "'exploit_type'",
+        "default": "'poc'",
+        "line": 15558
+      },
+      {
+        "key": "'evasion_level'",
+        "default": "'none'",
+        "line": 15559
+      },
+      {
+        "key": "'target_ip'",
+        "default": "'192.168.1.100'",
+        "line": 15567
+      },
+      {
+        "key": "'target_port'",
+        "default": "80",
+        "line": 15568
+      },
+      {
+        "key": "'target_description'",
+        "default": "f'Target for {cve_id}'",
+        "line": 15569
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15624,
+    "handler": "discover_attack_chains",
+    "path": "/api/vuln-intel/attack-chains",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target_software'",
+        "default": "''",
+        "line": 15628
+      },
+      {
+        "key": "'attack_depth'",
+        "default": "3",
+        "line": 15629
+      },
+      {
+        "key": "'include_zero_days'",
+        "default": "False",
+        "line": 15630
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15701,
+    "handler": "threat_intelligence_feeds",
+    "path": "/api/vuln-intel/threat-feeds",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'indicators'",
+        "default": "[]",
+        "line": 15705
+      },
+      {
+        "key": "'timeframe'",
+        "default": "'30d'",
+        "line": 15706
+      },
+      {
+        "key": "'sources'",
+        "default": "'all'",
+        "line": 15707
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15836,
+    "handler": "zero_day_research",
+    "path": "/api/vuln-intel/zero-day-research",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'target_software'",
+        "default": "''",
+        "line": 15840
+      },
+      {
+        "key": "'analysis_depth'",
+        "default": "'standard'",
+        "line": 15841
+      },
+      {
+        "key": "'source_code_url'",
+        "default": "''",
+        "line": 15842
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 15975,
+    "handler": "advanced_payload_generation",
+    "path": "/api/ai/advanced-payload-generation",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'attack_type'",
+        "default": "'rce'",
+        "line": 15979
+      },
+      {
+        "key": "'target_context'",
+        "default": "''",
+        "line": 15980
+      },
+      {
+        "key": "'evasion_level'",
+        "default": "'standard'",
+        "line": 15981
+      },
+      {
+        "key": "'custom_constraints'",
+        "default": "''",
+        "line": 15982
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16117,
+    "handler": "create_ctf_challenge_workflow",
+    "path": "/api/ctf/create-challenge-workflow",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'name'",
+        "default": "''",
+        "line": 16121
+      },
+      {
+        "key": "'category'",
+        "default": "'misc'",
+        "line": 16122
+      },
+      {
+        "key": "'difficulty'",
+        "default": "'unknown'",
+        "line": 16123
+      },
+      {
+        "key": "'points'",
+        "default": "100",
+        "line": 16124
+      },
+      {
+        "key": "'description'",
+        "default": "''",
+        "line": 16125
+      },
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 16126
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16157,
+    "handler": "auto_solve_ctf_challenge",
+    "path": "/api/ctf/auto-solve-challenge",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'name'",
+        "default": "''",
+        "line": 16161
+      },
+      {
+        "key": "'category'",
+        "default": "'misc'",
+        "line": 16162
+      },
+      {
+        "key": "'difficulty'",
+        "default": "'unknown'",
+        "line": 16163
+      },
+      {
+        "key": "'points'",
+        "default": "100",
+        "line": 16164
+      },
+      {
+        "key": "'description'",
+        "default": "''",
+        "line": 16165
+      },
+      {
+        "key": "'target'",
+        "default": "''",
+        "line": 16166
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16197,
+    "handler": "create_ctf_team_strategy",
+    "path": "/api/ctf/team-strategy",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'challenges'",
+        "default": "[]",
+        "line": 16201
+      },
+      {
+        "key": "'team_skills'",
+        "default": "{}",
+        "line": 16202
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16237,
+    "handler": "suggest_ctf_tools",
+    "path": "/api/ctf/suggest-tools",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'description'",
+        "default": "''",
+        "line": 16241
+      },
+      {
+        "key": "'category'",
+        "default": "'misc'",
+        "line": 16242
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16274,
+    "handler": "ctf_cryptography_solver",
+    "path": "/api/ctf/cryptography-solver",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'cipher_text'",
+        "default": "''",
+        "line": 16278
+      },
+      {
+        "key": "'cipher_type'",
+        "default": "'unknown'",
+        "line": 16279
+      },
+      {
+        "key": "'key_hint'",
+        "default": "''",
+        "line": 16280
+      },
+      {
+        "key": "'known_plaintext'",
+        "default": "''",
+        "line": 16281
+      },
+      {
+        "key": "'additional_info'",
+        "default": "''",
+        "line": 16282
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16372,
+    "handler": "ctf_forensics_analyzer",
+    "path": "/api/ctf/forensics-analyzer",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'file_path'",
+        "default": "''",
+        "line": 16376
+      },
+      {
+        "key": "'analysis_type'",
+        "default": "'comprehensive'",
+        "line": 16377
+      },
+      {
+        "key": "'extract_hidden'",
+        "default": "True",
+        "line": 16378
+      },
+      {
+        "key": "'check_steganography'",
+        "default": "True",
+        "line": 16379
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16515,
+    "handler": "ctf_binary_analyzer",
+    "path": "/api/ctf/binary-analyzer",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'binary_path'",
+        "default": "''",
+        "line": 16519
+      },
+      {
+        "key": "'analysis_depth'",
+        "default": "'comprehensive'",
+        "line": 16520
+      },
+      {
+        "key": "'check_protections'",
+        "default": "True",
+        "line": 16521
+      },
+      {
+        "key": "'find_gadgets'",
+        "default": "True",
+        "line": 16522
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16695,
+    "handler": "execute_command_async",
+    "path": "/api/process/execute-async",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'command'",
+        "default": "''",
+        "line": 16699
+      },
+      {
+        "key": "'context'",
+        "default": "{}",
+        "line": 16700
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16722,
+    "handler": "get_async_task_result",
+    "path": "/api/process/get-task-result/<task_id>",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16743,
+    "handler": "get_process_pool_stats",
+    "path": "/api/process/pool-stats",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16760,
+    "handler": "get_cache_stats",
+    "path": "/api/process/cache-stats",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16777,
+    "handler": "clear_process_cache",
+    "path": "/api/process/clear-cache",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16794,
+    "handler": "get_resource_usage",
+    "path": "/api/process/resource-usage",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16813,
+    "handler": "get_performance_dashboard",
+    "path": "/api/process/performance-dashboard",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16846,
+    "handler": "terminate_process_gracefully",
+    "path": "/api/process/terminate-gracefully/<int:pid>",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'timeout'",
+        "default": "30",
+        "line": 16850
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16875,
+    "handler": "configure_auto_scaling",
+    "path": "/api/process/auto-scaling",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'enabled'",
+        "default": "True",
+        "line": 16879
+      },
+      {
+        "key": "'thresholds'",
+        "default": "{}",
+        "line": 16880
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16901,
+    "handler": "manual_scale_pool",
+    "path": "/api/process/scale-pool",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [
+      {
+        "key": "'action'",
+        "default": "''",
+        "line": 16905
+      },
+      {
+        "key": "'count'",
+        "default": "1",
+        "line": 16906
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 16945,
+    "handler": "process_health_check",
+    "path": "/api/process/health-check",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 17045,
+    "handler": "get_error_statistics",
+    "path": "/api/error-handling/statistics",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 17059,
+    "handler": "test_error_recovery",
+    "path": "/api/error-handling/test-recovery",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 17105,
+    "handler": "get_fallback_chains",
+    "path": "/api/error-handling/fallback-chains",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [
+      {
+        "key": "'operation'",
+        "default": "''",
+        "line": 17108
+      }
+    ],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 17133,
+    "handler": "execute_with_recovery_endpoint",
+    "path": "/api/error-handling/execute-with-recovery",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 17166,
+    "handler": "classify_error_endpoint",
+    "path": "/api/error-handling/classify-error",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 17198,
+    "handler": "get_parameter_adjustments",
+    "path": "/api/error-handling/parameter-adjustments",
+    "methods": [
+      "POST"
+    ],
+    "input_fields": [],
+    "status": "not_ported"
+  },
+  {
+    "source": "hexstrike_server.py",
+    "line": 17231,
+    "handler": "get_alternative_tools",
+    "path": "/api/error-handling/alternative-tools",
+    "methods": [
+      "GET"
+    ],
+    "input_fields": [
+      {
+        "key": "'tool_name'",
+        "default": "''",
+        "line": 17234
+      }
+    ],
+    "status": "not_ported"
+  }
+]

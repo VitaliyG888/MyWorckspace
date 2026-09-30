@@ -1,0 +1,11 @@
+python,rust_or_replacement,status
+flask,axum,native HTTP control plane
+requests/aiohttp,reqwest + rustls,planned external API client
+fastmcp/mcp,minimal stdio + optional rmcp 3.5.0,wire contract tests required
+psutil,OS metrics/cgroup exporter,planned
+beautifulsoup4,scraper/html5ever,planned; parsing not inherently obsolete
+selenium,isolated browser worker,not ported
+webdriver-manager,pinned browser image,not ported
+mitmproxy,external isolated service,not ported
+pwntools/angr,Python worker bridge,not a Rust library substitute
+bcrypt pin,remove transitive compatibility workaround,verify target dependency graph

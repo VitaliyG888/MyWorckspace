@@ -1,0 +1,243 @@
+# HexStrike AI → Rust: результаты анализа и проект миграции
+
+Подготовлены **инвентаризация исходников, анализ шести PDF, проверка предложенных инструментов на сентябрь 2026 года, архитектура и исходники Rust-прототипа**.
+
+**Важное ограничение:** это не завершённый перенос 150 инструментов и не проверенный production-релиз. В Computer отсутствуют `cargo` и `rustc`, поэтому сборку, Rust-тесты и бенчмарки выполнить не удалось. Ускорение 10–100× не подтверждено. Реализованные модули, экспериментальные интеграции и неперенесённые возможности явно разделены.
+
+## 1. Готовые материалы
+
+Основная поставка содержит **68 файлов**: Rust-код, `Cargo.toml`, тесты, бенчмарки, Dockerfile, CI, документацию, CSV/JSON-инвентаризацию и контрольные суммы.
+
+:preview_file{path="conversation-svl77xCEzr/hexstrike-rust-0.1-review.zip" title="Rust-проект, документация и инвентаризация" contentType="application/zip"}
+
+Отдельно доступны подробный отчёт и каталог проверенных инструментов:
+
+:preview_file{path="conversation-svl77xCEzr/HexStrike-Rust-Migration-RU.md" title="Полный инженерный отчёт и план миграции" contentType="text/markdown"}
+
+:preview_file{path="conversation-svl77xCEzr/HexStrike-Tools-2026.md" title="Проверка инструментов и AI-проектов 2026" contentType="text/markdown"}
+
+## 2. Что обнаружено в исходниках
+
+Статический анализ показывает, что заявленные «150+ инструментов» нужно разделять на разные сущности:
+
+| Показатель | Результат |
+|---|---:|
+| Строки `hexstrike_server.py` | 17 289 |
+| Классы сервера | 44 |
+| Функции и методы сервера | 448 |
+| Строки `hexstrike_mcp.py` | 5 470 |
+| Классы MCP-адаптера | 3 |
+| Функции и методы MCP-адаптера | 160 |
+| Flask-маршруты | 156 |
+| Маршруты `/api/tools/*` | 90 |
+| Регистрации `@mcp.tool` | 151 |
+| Уникальные имена MCP-инструментов | 150 |
+| Кандидаты из объединения health-списков и tool routes | 133 |
+
+**150 MCP-имён не означают 150 независимых внешних программ.** Встречаются внутренние workflows, служебные возможности, повторные регистрации и инструменты, только объявленные в списках.
+
+Полные списки с сигнатурами, маршрутами и строками исходников:
+
+:preview_file{path="conversation-svl77xCEzr/HexStrike-MCP-Inventory.csv" title="Все 151 регистрации MCP" contentType="text/csv"}
+
+:preview_file{path="conversation-svl77xCEzr/HexStrike-Tool-Migration.csv" title="Каталог 133 кандидатов и решения по миграции" contentType="text/csv"}
+
+### Главные дефекты, которые нельзя переносить буквально
+
+Самая существенная проблема исходного проекта не производительность Python, а **границы исполнения и доверия**.
+
+| Проблема | Место в исходниках | Решение для Rust |
+|---|---|---|
+| Произвольное исполнение команд без видимой аутентификации; запуск Flask на всех интерфейсах | `server:9137–9158`, `17256–17289` | Удалить generic command API, localhost по умолчанию, отдельная авторизация |
+| `shell=True` и интерполяция пользовательских значений | `server:6875–6883` и tool routes | Типизированные аргументы, фиксированные executable paths |
+| Пароли в argv, логах и потенциально кэше | `server:11118–11133`, `11282–11316` | Secret handles, redaction, запрет кэширования чувствительных результатов |
+| Out-of-scope URL фактически продолжает обрабатываться | `server:13302–13325`, `13370–13388` | Жёсткий отказ перед сетевой операцией |
+| Timeout не гарантирует завершение дерева процессов | `server:6925–6943` | Process groups, затем cgroups и проверка отмены |
+| Неограниченное накопление stdout/stderr | `server:6799–6819` | Лимиты байтов, backpressure, ограниченное хранилище |
+| MCP вызывает отсутствующий `/api/tools/burpsuite` | `mcp:3462–3491` | Единый каталог и contract tests |
+| Дважды зарегистрирован `httpx_probe` | `mcp:2675`, `3392` | Проверка уникальности имён |
+| Использование `self` в nested functions без соответствующего объекта | `mcp:2880–2910`, `3103–3148` | Явная передача зависимостей workflow |
+
+Дополнительно обнаружены несовпадения форматов ответов, ошибка типа результата при async cache hit и общий mutable state браузера, HTTP-сессий и процессов.
+
+Встроенный «AI» также нельзя считать готовым LLM-слоем: значительная часть поведения реализована эвристиками, шаблонами и статическими workflows. При переносе нужна настоящая граница между планированием, проверкой разрешений и исполнением.
+
+## 3. Анализ PDF
+
+Обработаны **все шесть приложенных PDF, 733 страницы**, включая оба Bug Bounty Playbook.
+
+| Документ | Страниц | Использование в архитектуре |
+|---|---:|---|
+| Blue Team Tools | 29 | Defensive integrations, monitoring, evidence collection |
+| Bug Bounty Tools Collection | 17 | Каталог recon, discovery, fuzzing и анализа приложений |
+| Red Teaming Toolkit-1 | 27 | Разделение возможностей по этапам и риску |
+| Red Team Guides | 198 | Справочник команд и capability mapping |
+| Bug Bounty Playbook v1 | 212 | Scope, организация исследований, recon workflows |
+| Bug Bounty Playbook V2v | 250 | Классификация проверок приложений и работа с evidence |
+
+Извлечён текстовый слой, выполнен OCR двух обложек, сохранены ссылки и номера страниц. В V2 присутствует дублирование текстового слоя. **Изображения и скриншоты команд не проходили сплошной OCR**, поэтому полнота распознавания каждого визуального примера не заявляется.
+
+PDF рассматриваются как справочные материалы, а не как доверенный источник команд для автоматического исполнения.
+
+## 4. Проверка инструментов 2026 года
+
+Предложенные `arsenal-ng`, `legba`, `oletools`, `penelope`, `shell-gpt`, `tookie-osint` и `uro` действительно перечислены среди новых пакетов **Kali Linux 2026.2**. Это подтверждает наличие в репозиториях, но не предустановку в каждом образе. [1]
+
+При этом несколько исходных предположений требуют корректировки:
+
+| Предложение | Инженерное решение |
+|---|---|
+| Удалить Nikto как устаревший | Не удалять автоматически; Nuclei дополняет его, а не гарантирует функциональную эквивалентность |
+| Заменить Hydra на Legba | Сравнить протоколы, ограничения и поведение; язык Rust сам по себе не доказывает превосходство |
+| Заменить John на Hashcat | Выбирать по форматам и CPU/GPU workload |
+| Заменить radare2 на Ghidra | Сохранить выбор backend: разные модели автоматизации |
+| Переписать все Python-инструменты | Сначала профилировать; Python-зависимые анализаторы можно оставить изолированными workers |
+| Добавить OWASP CVE Lite CLI как универсальный scanner | Это прежде всего анализатор JS/TS lockfiles, не замена network/container scanning |
+| Подключить Neo и Sn1per Professional как обычные CLI | Это отдельные платформенные и коммерческие интеграции |
+| Использовать RustAutoRecon как зрелую основу | Репозиторий существует, но зрелость релизов и лицензирование требуют дополнительного review |
+| Добавить `killer` | Точное соответствие указанному Rust-framework не подтверждено |
+
+OWASP CVE Lite CLI, ProjectDiscovery Neo и Sn1per Professional 2026 подтверждены публичными источниками, но решают разные задачи и имеют разные модели интеграции. [2,3,4,5]
+
+PentestGPT, VulnHuntr, CyberStrikeAI, Darkmoon и PTFusion полезны как **источники архитектурных подходов**, а не как взаимозаменяемые готовые агенты. Особенно важны разделение reasoning/parsing/execution, доказательная база выводов и независимые механизмы approval. [6,7,8,9,10]
+
+Полная проверка 25 позиций с источниками и оговорками включена в `TOOLS_2026.md`.
+
+## 5. Архитектура Rust
+
+Целевая система разделяет control plane, планирование и изолированное исполнение:
+
+````text
+Operator / MCP host
+        │
+        ▼
+Axum API / MCP transport
+        │
+        ▼
+Identity + deterministic scope/capability policy
+        │
+        ▼
+Bounded jobs + coordinator
+        │
+        ├── Bug bounty planner
+        ├── OSINT worker
+        ├── CVE evidence worker
+        └── Isolated CTF worker
+                    │
+                    ▼
+              Tool broker
+                    │
+          ┌─────────┴─────────┐
+          ▼                   ▼
+  Isolated CLI workers   Approved MCP servers
+          └─────────┬─────────┘
+                    ▼
+          Normalized evidence
+                    │
+          LLM analysis + verifier
+                    │
+             JSON / XML / SARIF
+````
+
+**LLM предлагает действие, но не разрешает его сам себе.** Scope, допустимый инструмент, бюджет, deadline и необходимость approval проверяются независимым кодом.
+
+Подробная Mermaid-диаграмма, контракты `JobRequest`, `JobRecord`, `ToolResult` и критерии готовности находятся в отчёте.
+
+### Что реализовано в исходниках прототипа
+
+В архиве 28 Rust source files по запрошенной структуре.
+
+| Компонент | Реализация |
+|---|---|
+| `decision_engine` | Проверка доменов, границ subdomain scope, бюджета шагов и разрешённых passive actions |
+| `tool_manager` | Единый каталог `normalize_urls` и `plan_osint` |
+| `cache` | Moka, TTL, ключи с principal/tool/version/input |
+| `process` | Фиксированный безопасный fixture, без shell, с deadline, semaphore и output limits |
+| `server/api` | Axum, localhost, bearer token, body limit и ограничение параллелизма |
+| `server/mcp` | Минимальный stdio MCP: initialization, ping, discovery и tool calls |
+| `agents/osint` | Workflow сбора evidence через trait, consent gate и deadlines |
+| `ai/mcp_client` | Экспериментальный optional `rmcp`-адаптер |
+| Экспорт | JSON, XML envelope и SARIF без выдуманных findings |
+
+**Не реализованы:** полный перенос внешних scanners, live LLM providers, полноценная multi-agent coordination, persistent jobs, TUI, production isolation и полная MCP conformance. Эти ограничения перечислены и в коде, и в документации.
+
+### Важная поправка к AI-OSINT примеру
+
+Для `osint-mcp` нельзя передавать одинаковый аргумент во все инструменты:
+
+````json
+{"tool":"osint_whois","arguments":{"target":"example.com"}}
+{"tool":"osint_subdomain_enum","arguments":{"domain":"example.com"}}
+{"tool":"osint_shodan_host","arguments":{"ip":"<approved-ip-address>"}}
+````
+
+Проект действительно декларирует 26 инструментов, но **source-declared schema необходимо сверять с реальным `tools/list`**. Кроме того, в каталоге присутствуют active scanning и configuration tools, поэтому название OSINT не является признаком безопасной read-only операции. [11]
+
+Прототип разрешает только ограниченный набор чтения и отказывает при неожиданной схеме. Автоматический переход от домена к Shodan lookup не включён.
+
+## 6. Тестирование и производительность
+
+Фактический статус проверки:
+
+| Проверка | Статус |
+|---|---|
+| Статическая инвентаризация Python | Выполнена |
+| Извлечение PDF и OCR обложек | Выполнены |
+| Python artifact checks | **12 пройдено** |
+| Rust tests | 11 подготовлено, не запускались |
+| Criterion benchmarks | 2 подготовлено, не запускались |
+| `cargo check/test/clippy` | Не выполнены |
+| Docker build, live MCP, LLM calls | Не выполнены |
+| Измеренное ускорение | Нет данных |
+
+:preview_file{path="conversation-svl77xCEzr/HexStrike-Validation.md" title="Протокол проверки и ограничения" contentType="text/markdown"}
+
+**Ускорение 10–100× нельзя обещать для проекта целиком.** Если 80% времени занимает сеть, внешний CLI или LLM, даже бесконечное ускорение оставшихся 20% ограничивает общий результат примерно **1,25×**. Поэтому отдельно измеряются parsing, orchestration, cache, process overhead и end-to-end workload.
+
+Первый внешний gate после распаковки:
+
+````bash
+cd hexstrike-rust
+
+cargo fmt --all
+cargo generate-lockfile
+cargo check --all-features
+cargo test --all-features
+cargo clippy --all-targets --all-features -- -D warnings
+cargo bench --no-run
+
+python3 scripts/static_checks.py
+cargo build --release --locked
+````
+
+После успешной сборки предусмотрены локальные fixtures и MCP smoke test, не требующие сканирования внешних целей.
+
+## 7. План завершения миграции
+
+Ваш исходный график составляет **16 недель**. Его разумно использовать как ориентир, но завершение определять по критериям готовности, а не числу созданных wrappers.
+
+| Этап | Недели | Критерий готовности |
+|---|---|---|
+| Анализ | 1 | Проверенная инвентаризация, contracts и baseline workloads |
+| Каркас | 2–3 | Собираемый проект, policy, typed jobs, CI |
+| Адаптеры волнами | 4–7 | Schema, parser, timeout, scope и negative tests для каждого включённого инструмента |
+| AI и coordination | 8–10 | Typed task graph, бюджеты, evidence verifier |
+| Интеграция | 11–12 | MCP/provider contracts, exports, event stream |
+| Тестирование | 13–14 | Security regression, cancellation, нагрузка и измеренные benchmarks |
+| Документация | 15 | Установка, совместимость, эксплуатация и восстановление |
+| Релиз | 16 | Lockfiles, SBOM, подписи, staged rollout и rollback |
+
+**Рекомендация:** мигрировать поэтапно, начиная с безопасного control plane и read-only/offline возможностей. Сохранение опасных semantics исходного `/api/command` ради совместимости недопустимо; полноценным завершением считать только перенос с проверенными контрактами, ограничениями исполнения и измеримым результатом.
+
+References:
+[1] https://www.kali.org/blog/kali-linux-2026-2-release/
+[2] https://owasp.org/blog/2026/07/06/cve-lite-cli-lab.html
+[3] https://github.com/OWASP/cve-lite-cli
+[4] https://projectdiscovery.io/blog/neo-v1
+[5] https://sn1persecurity.com/wordpress/product/sn1per-professional-2026-license/
+[6] https://www.usenix.org/conference/usenixsecurity24/presentation/deng
+[7] https://github.com/protectai/vulnhuntr
+[8] https://github.com/aipentest/cyberstrikeai
+[9] https://github.com/ASCIT31/Dark-Moon
+[10] https://www.sciencedirect.com/science/article/abs/pii/S1566253525007936
+[11] https://github.com/rjn32s/osint-mcp

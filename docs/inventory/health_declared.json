@@ -1,0 +1,637 @@
+[
+  {
+    "name": "nmap",
+    "category": "essential_tools",
+    "line": 9028
+  },
+  {
+    "name": "gobuster",
+    "category": "essential_tools",
+    "line": 9028
+  },
+  {
+    "name": "dirb",
+    "category": "essential_tools",
+    "line": 9028
+  },
+  {
+    "name": "nikto",
+    "category": "essential_tools",
+    "line": 9028
+  },
+  {
+    "name": "sqlmap",
+    "category": "essential_tools",
+    "line": 9028
+  },
+  {
+    "name": "hydra",
+    "category": "essential_tools",
+    "line": 9028
+  },
+  {
+    "name": "john",
+    "category": "essential_tools",
+    "line": 9028
+  },
+  {
+    "name": "hashcat",
+    "category": "essential_tools",
+    "line": 9028
+  },
+  {
+    "name": "rustscan",
+    "category": "network_tools",
+    "line": 9032
+  },
+  {
+    "name": "masscan",
+    "category": "network_tools",
+    "line": 9032
+  },
+  {
+    "name": "autorecon",
+    "category": "network_tools",
+    "line": 9032
+  },
+  {
+    "name": "nbtscan",
+    "category": "network_tools",
+    "line": 9032
+  },
+  {
+    "name": "arp-scan",
+    "category": "network_tools",
+    "line": 9032
+  },
+  {
+    "name": "responder",
+    "category": "network_tools",
+    "line": 9032
+  },
+  {
+    "name": "nxc",
+    "category": "network_tools",
+    "line": 9033
+  },
+  {
+    "name": "enum4linux-ng",
+    "category": "network_tools",
+    "line": 9033
+  },
+  {
+    "name": "rpcclient",
+    "category": "network_tools",
+    "line": 9033
+  },
+  {
+    "name": "enum4linux",
+    "category": "network_tools",
+    "line": 9033
+  },
+  {
+    "name": "ffuf",
+    "category": "web_security_tools",
+    "line": 9037
+  },
+  {
+    "name": "feroxbuster",
+    "category": "web_security_tools",
+    "line": 9037
+  },
+  {
+    "name": "dirsearch",
+    "category": "web_security_tools",
+    "line": 9037
+  },
+  {
+    "name": "dotdotpwn",
+    "category": "web_security_tools",
+    "line": 9037
+  },
+  {
+    "name": "xsser",
+    "category": "web_security_tools",
+    "line": 9037
+  },
+  {
+    "name": "wfuzz",
+    "category": "web_security_tools",
+    "line": 9037
+  },
+  {
+    "name": "gau",
+    "category": "web_security_tools",
+    "line": 9038
+  },
+  {
+    "name": "waybackurls",
+    "category": "web_security_tools",
+    "line": 9038
+  },
+  {
+    "name": "arjun",
+    "category": "web_security_tools",
+    "line": 9038
+  },
+  {
+    "name": "paramspider",
+    "category": "web_security_tools",
+    "line": 9038
+  },
+  {
+    "name": "x8",
+    "category": "web_security_tools",
+    "line": 9038
+  },
+  {
+    "name": "jaeles",
+    "category": "web_security_tools",
+    "line": 9038
+  },
+  {
+    "name": "dalfox",
+    "category": "web_security_tools",
+    "line": 9038
+  },
+  {
+    "name": "httpx",
+    "category": "web_security_tools",
+    "line": 9039
+  },
+  {
+    "name": "wafw00f",
+    "category": "web_security_tools",
+    "line": 9039
+  },
+  {
+    "name": "burpsuite",
+    "category": "web_security_tools",
+    "line": 9039
+  },
+  {
+    "name": "zaproxy",
+    "category": "web_security_tools",
+    "line": 9039
+  },
+  {
+    "name": "katana",
+    "category": "web_security_tools",
+    "line": 9039
+  },
+  {
+    "name": "hakrawler",
+    "category": "web_security_tools",
+    "line": 9039
+  },
+  {
+    "name": "nuclei",
+    "category": "vuln_scanning_tools",
+    "line": 9043
+  },
+  {
+    "name": "wpscan",
+    "category": "vuln_scanning_tools",
+    "line": 9043
+  },
+  {
+    "name": "graphql-scanner",
+    "category": "vuln_scanning_tools",
+    "line": 9043
+  },
+  {
+    "name": "jwt-analyzer",
+    "category": "vuln_scanning_tools",
+    "line": 9043
+  },
+  {
+    "name": "medusa",
+    "category": "password_tools",
+    "line": 9047
+  },
+  {
+    "name": "patator",
+    "category": "password_tools",
+    "line": 9047
+  },
+  {
+    "name": "hash-identifier",
+    "category": "password_tools",
+    "line": 9047
+  },
+  {
+    "name": "ophcrack",
+    "category": "password_tools",
+    "line": 9047
+  },
+  {
+    "name": "hashcat-utils",
+    "category": "password_tools",
+    "line": 9047
+  },
+  {
+    "name": "gdb",
+    "category": "binary_tools",
+    "line": 9051
+  },
+  {
+    "name": "radare2",
+    "category": "binary_tools",
+    "line": 9051
+  },
+  {
+    "name": "binwalk",
+    "category": "binary_tools",
+    "line": 9051
+  },
+  {
+    "name": "ropgadget",
+    "category": "binary_tools",
+    "line": 9051
+  },
+  {
+    "name": "checksec",
+    "category": "binary_tools",
+    "line": 9051
+  },
+  {
+    "name": "objdump",
+    "category": "binary_tools",
+    "line": 9051
+  },
+  {
+    "name": "ghidra",
+    "category": "binary_tools",
+    "line": 9052
+  },
+  {
+    "name": "pwntools",
+    "category": "binary_tools",
+    "line": 9052
+  },
+  {
+    "name": "one-gadget",
+    "category": "binary_tools",
+    "line": 9052
+  },
+  {
+    "name": "ropper",
+    "category": "binary_tools",
+    "line": 9052
+  },
+  {
+    "name": "angr",
+    "category": "binary_tools",
+    "line": 9052
+  },
+  {
+    "name": "libc-database",
+    "category": "binary_tools",
+    "line": 9052
+  },
+  {
+    "name": "pwninit",
+    "category": "binary_tools",
+    "line": 9053
+  },
+  {
+    "name": "volatility3",
+    "category": "forensics_tools",
+    "line": 9057
+  },
+  {
+    "name": "vol",
+    "category": "forensics_tools",
+    "line": 9057
+  },
+  {
+    "name": "steghide",
+    "category": "forensics_tools",
+    "line": 9057
+  },
+  {
+    "name": "hashpump",
+    "category": "forensics_tools",
+    "line": 9057
+  },
+  {
+    "name": "foremost",
+    "category": "forensics_tools",
+    "line": 9057
+  },
+  {
+    "name": "exiftool",
+    "category": "forensics_tools",
+    "line": 9057
+  },
+  {
+    "name": "strings",
+    "category": "forensics_tools",
+    "line": 9058
+  },
+  {
+    "name": "xxd",
+    "category": "forensics_tools",
+    "line": 9058
+  },
+  {
+    "name": "file",
+    "category": "forensics_tools",
+    "line": 9058
+  },
+  {
+    "name": "photorec",
+    "category": "forensics_tools",
+    "line": 9058
+  },
+  {
+    "name": "testdisk",
+    "category": "forensics_tools",
+    "line": 9058
+  },
+  {
+    "name": "scalpel",
+    "category": "forensics_tools",
+    "line": 9058
+  },
+  {
+    "name": "bulk-extractor",
+    "category": "forensics_tools",
+    "line": 9058
+  },
+  {
+    "name": "stegsolve",
+    "category": "forensics_tools",
+    "line": 9059
+  },
+  {
+    "name": "zsteg",
+    "category": "forensics_tools",
+    "line": 9059
+  },
+  {
+    "name": "outguess",
+    "category": "forensics_tools",
+    "line": 9059
+  },
+  {
+    "name": "prowler",
+    "category": "cloud_tools",
+    "line": 9063
+  },
+  {
+    "name": "scout-suite",
+    "category": "cloud_tools",
+    "line": 9063
+  },
+  {
+    "name": "trivy",
+    "category": "cloud_tools",
+    "line": 9063
+  },
+  {
+    "name": "kube-hunter",
+    "category": "cloud_tools",
+    "line": 9063
+  },
+  {
+    "name": "kube-bench",
+    "category": "cloud_tools",
+    "line": 9063
+  },
+  {
+    "name": "docker-bench-security",
+    "category": "cloud_tools",
+    "line": 9064
+  },
+  {
+    "name": "checkov",
+    "category": "cloud_tools",
+    "line": 9064
+  },
+  {
+    "name": "terrascan",
+    "category": "cloud_tools",
+    "line": 9064
+  },
+  {
+    "name": "falco",
+    "category": "cloud_tools",
+    "line": 9064
+  },
+  {
+    "name": "clair",
+    "category": "cloud_tools",
+    "line": 9064
+  },
+  {
+    "name": "amass",
+    "category": "osint_tools",
+    "line": 9068
+  },
+  {
+    "name": "subfinder",
+    "category": "osint_tools",
+    "line": 9068
+  },
+  {
+    "name": "fierce",
+    "category": "osint_tools",
+    "line": 9068
+  },
+  {
+    "name": "dnsenum",
+    "category": "osint_tools",
+    "line": 9068
+  },
+  {
+    "name": "theharvester",
+    "category": "osint_tools",
+    "line": 9068
+  },
+  {
+    "name": "sherlock",
+    "category": "osint_tools",
+    "line": 9068
+  },
+  {
+    "name": "social-analyzer",
+    "category": "osint_tools",
+    "line": 9069
+  },
+  {
+    "name": "recon-ng",
+    "category": "osint_tools",
+    "line": 9069
+  },
+  {
+    "name": "maltego",
+    "category": "osint_tools",
+    "line": 9069
+  },
+  {
+    "name": "spiderfoot",
+    "category": "osint_tools",
+    "line": 9069
+  },
+  {
+    "name": "shodan-cli",
+    "category": "osint_tools",
+    "line": 9069
+  },
+  {
+    "name": "censys-cli",
+    "category": "osint_tools",
+    "line": 9070
+  },
+  {
+    "name": "have-i-been-pwned",
+    "category": "osint_tools",
+    "line": 9070
+  },
+  {
+    "name": "metasploit",
+    "category": "exploitation_tools",
+    "line": 9074
+  },
+  {
+    "name": "exploit-db",
+    "category": "exploitation_tools",
+    "line": 9074
+  },
+  {
+    "name": "searchsploit",
+    "category": "exploitation_tools",
+    "line": 9074
+  },
+  {
+    "name": "api-schema-analyzer",
+    "category": "api_tools",
+    "line": 9078
+  },
+  {
+    "name": "postman",
+    "category": "api_tools",
+    "line": 9078
+  },
+  {
+    "name": "insomnia",
+    "category": "api_tools",
+    "line": 9078
+  },
+  {
+    "name": "curl",
+    "category": "api_tools",
+    "line": 9078
+  },
+  {
+    "name": "httpie",
+    "category": "api_tools",
+    "line": 9078
+  },
+  {
+    "name": "anew",
+    "category": "api_tools",
+    "line": 9078
+  },
+  {
+    "name": "qsreplace",
+    "category": "api_tools",
+    "line": 9078
+  },
+  {
+    "name": "uro",
+    "category": "api_tools",
+    "line": 9078
+  },
+  {
+    "name": "kismet",
+    "category": "wireless_tools",
+    "line": 9082
+  },
+  {
+    "name": "wireshark",
+    "category": "wireless_tools",
+    "line": 9082
+  },
+  {
+    "name": "tshark",
+    "category": "wireless_tools",
+    "line": 9082
+  },
+  {
+    "name": "tcpdump",
+    "category": "wireless_tools",
+    "line": 9082
+  },
+  {
+    "name": "smbmap",
+    "category": "additional_tools",
+    "line": 9086
+  },
+  {
+    "name": "volatility",
+    "category": "additional_tools",
+    "line": 9086
+  },
+  {
+    "name": "sleuthkit",
+    "category": "additional_tools",
+    "line": 9086
+  },
+  {
+    "name": "autopsy",
+    "category": "additional_tools",
+    "line": 9086
+  },
+  {
+    "name": "evil-winrm",
+    "category": "additional_tools",
+    "line": 9086
+  },
+  {
+    "name": "paramspider",
+    "category": "additional_tools",
+    "line": 9087
+  },
+  {
+    "name": "airmon-ng",
+    "category": "additional_tools",
+    "line": 9087
+  },
+  {
+    "name": "airodump-ng",
+    "category": "additional_tools",
+    "line": 9087
+  },
+  {
+    "name": "aireplay-ng",
+    "category": "additional_tools",
+    "line": 9087
+  },
+  {
+    "name": "aircrack-ng",
+    "category": "additional_tools",
+    "line": 9087
+  },
+  {
+    "name": "msfvenom",
+    "category": "additional_tools",
+    "line": 9088
+  },
+  {
+    "name": "msfconsole",
+    "category": "additional_tools",
+    "line": 9088
+  },
+  {
+    "name": "graphql-scanner",
+    "category": "additional_tools",
+    "line": 9088
+  },
+  {
+    "name": "jwt-analyzer",
+    "category": "additional_tools",
+    "line": 9088
+  }
+]

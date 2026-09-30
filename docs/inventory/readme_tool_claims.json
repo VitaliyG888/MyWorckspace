@@ -1,0 +1,646 @@
+[
+  {
+    "name": "Nmap",
+    "line": 271
+  },
+  {
+    "name": "Rustscan",
+    "line": 272
+  },
+  {
+    "name": "Masscan",
+    "line": 273
+  },
+  {
+    "name": "AutoRecon",
+    "line": 274
+  },
+  {
+    "name": "Amass",
+    "line": 275
+  },
+  {
+    "name": "Subfinder",
+    "line": 276
+  },
+  {
+    "name": "Fierce",
+    "line": 277
+  },
+  {
+    "name": "DNSEnum",
+    "line": 278
+  },
+  {
+    "name": "TheHarvester",
+    "line": 279
+  },
+  {
+    "name": "ARP-Scan",
+    "line": 280
+  },
+  {
+    "name": "NBTScan",
+    "line": 281
+  },
+  {
+    "name": "RPCClient",
+    "line": 282
+  },
+  {
+    "name": "Enum4linux",
+    "line": 283
+  },
+  {
+    "name": "Enum4linux-ng",
+    "line": 284
+  },
+  {
+    "name": "SMBMap",
+    "line": 285
+  },
+  {
+    "name": "Responder",
+    "line": 286
+  },
+  {
+    "name": "NetExec",
+    "line": 287
+  },
+  {
+    "name": "Gobuster",
+    "line": 294
+  },
+  {
+    "name": "Dirsearch",
+    "line": 295
+  },
+  {
+    "name": "Feroxbuster",
+    "line": 296
+  },
+  {
+    "name": "FFuf",
+    "line": 297
+  },
+  {
+    "name": "Dirb",
+    "line": 298
+  },
+  {
+    "name": "HTTPx",
+    "line": 299
+  },
+  {
+    "name": "Katana",
+    "line": 300
+  },
+  {
+    "name": "Hakrawler",
+    "line": 301
+  },
+  {
+    "name": "Gau",
+    "line": 302
+  },
+  {
+    "name": "Waybackurls",
+    "line": 303
+  },
+  {
+    "name": "Nuclei",
+    "line": 304
+  },
+  {
+    "name": "Nikto",
+    "line": 305
+  },
+  {
+    "name": "SQLMap",
+    "line": 306
+  },
+  {
+    "name": "WPScan",
+    "line": 307
+  },
+  {
+    "name": "Arjun",
+    "line": 308
+  },
+  {
+    "name": "ParamSpider",
+    "line": 309
+  },
+  {
+    "name": "X8",
+    "line": 310
+  },
+  {
+    "name": "Jaeles",
+    "line": 311
+  },
+  {
+    "name": "Dalfox",
+    "line": 312
+  },
+  {
+    "name": "Wafw00f",
+    "line": 313
+  },
+  {
+    "name": "TestSSL",
+    "line": 314
+  },
+  {
+    "name": "SSLScan",
+    "line": 315
+  },
+  {
+    "name": "SSLyze",
+    "line": 316
+  },
+  {
+    "name": "Anew",
+    "line": 317
+  },
+  {
+    "name": "QSReplace",
+    "line": 318
+  },
+  {
+    "name": "Uro",
+    "line": 319
+  },
+  {
+    "name": "Whatweb",
+    "line": 320
+  },
+  {
+    "name": "JWT-Tool",
+    "line": 321
+  },
+  {
+    "name": "GraphQL-Voyager",
+    "line": 322
+  },
+  {
+    "name": "Burp Suite Extensions",
+    "line": 323
+  },
+  {
+    "name": "ZAP Proxy",
+    "line": 324
+  },
+  {
+    "name": "Wfuzz",
+    "line": 325
+  },
+  {
+    "name": "Commix",
+    "line": 326
+  },
+  {
+    "name": "NoSQLMap",
+    "line": 327
+  },
+  {
+    "name": "Tplmap",
+    "line": 328
+  },
+  {
+    "name": "Headless Chrome Automation",
+    "line": 331
+  },
+  {
+    "name": "Screenshot Capture",
+    "line": 332
+  },
+  {
+    "name": "DOM Analysis",
+    "line": 333
+  },
+  {
+    "name": "Network Traffic Monitoring",
+    "line": 334
+  },
+  {
+    "name": "Security Header Analysis",
+    "line": 335
+  },
+  {
+    "name": "Form Detection & Analysis",
+    "line": 336
+  },
+  {
+    "name": "JavaScript Execution",
+    "line": 337
+  },
+  {
+    "name": "Proxy Integration",
+    "line": 338
+  },
+  {
+    "name": "Multi-page Crawling",
+    "line": 339
+  },
+  {
+    "name": "Performance Metrics",
+    "line": 340
+  },
+  {
+    "name": "Hydra",
+    "line": 347
+  },
+  {
+    "name": "John the Ripper",
+    "line": 348
+  },
+  {
+    "name": "Hashcat",
+    "line": 349
+  },
+  {
+    "name": "Medusa",
+    "line": 350
+  },
+  {
+    "name": "Patator",
+    "line": 351
+  },
+  {
+    "name": "NetExec",
+    "line": 352
+  },
+  {
+    "name": "SMBMap",
+    "line": 353
+  },
+  {
+    "name": "Evil-WinRM",
+    "line": 354
+  },
+  {
+    "name": "Hash-Identifier",
+    "line": 355
+  },
+  {
+    "name": "HashID",
+    "line": 356
+  },
+  {
+    "name": "CrackStation",
+    "line": 357
+  },
+  {
+    "name": "Ophcrack",
+    "line": 358
+  },
+  {
+    "name": "GDB",
+    "line": 365
+  },
+  {
+    "name": "GDB-PEDA",
+    "line": 366
+  },
+  {
+    "name": "GDB-GEF",
+    "line": 367
+  },
+  {
+    "name": "Radare2",
+    "line": 368
+  },
+  {
+    "name": "Ghidra",
+    "line": 369
+  },
+  {
+    "name": "IDA Free",
+    "line": 370
+  },
+  {
+    "name": "Binary Ninja",
+    "line": 371
+  },
+  {
+    "name": "Binwalk",
+    "line": 372
+  },
+  {
+    "name": "ROPgadget",
+    "line": 373
+  },
+  {
+    "name": "Ropper",
+    "line": 374
+  },
+  {
+    "name": "One-Gadget",
+    "line": 375
+  },
+  {
+    "name": "Checksec",
+    "line": 376
+  },
+  {
+    "name": "Strings",
+    "line": 377
+  },
+  {
+    "name": "Objdump",
+    "line": 378
+  },
+  {
+    "name": "Readelf",
+    "line": 379
+  },
+  {
+    "name": "XXD",
+    "line": 380
+  },
+  {
+    "name": "Hexdump",
+    "line": 381
+  },
+  {
+    "name": "Pwntools",
+    "line": 382
+  },
+  {
+    "name": "Angr",
+    "line": 383
+  },
+  {
+    "name": "Libc-Database",
+    "line": 384
+  },
+  {
+    "name": "Pwninit",
+    "line": 385
+  },
+  {
+    "name": "Volatility",
+    "line": 386
+  },
+  {
+    "name": "MSFVenom",
+    "line": 387
+  },
+  {
+    "name": "UPX",
+    "line": 388
+  },
+  {
+    "name": "Prowler",
+    "line": 395
+  },
+  {
+    "name": "Scout Suite",
+    "line": 396
+  },
+  {
+    "name": "CloudMapper",
+    "line": 397
+  },
+  {
+    "name": "Pacu",
+    "line": 398
+  },
+  {
+    "name": "Trivy",
+    "line": 399
+  },
+  {
+    "name": "Clair",
+    "line": 400
+  },
+  {
+    "name": "Kube-Hunter",
+    "line": 401
+  },
+  {
+    "name": "Kube-Bench",
+    "line": 402
+  },
+  {
+    "name": "Docker Bench Security",
+    "line": 403
+  },
+  {
+    "name": "Falco",
+    "line": 404
+  },
+  {
+    "name": "Checkov",
+    "line": 405
+  },
+  {
+    "name": "Terrascan",
+    "line": 406
+  },
+  {
+    "name": "CloudSploit",
+    "line": 407
+  },
+  {
+    "name": "AWS CLI",
+    "line": 408
+  },
+  {
+    "name": "Azure CLI",
+    "line": 409
+  },
+  {
+    "name": "GCloud",
+    "line": 410
+  },
+  {
+    "name": "Kubectl",
+    "line": 411
+  },
+  {
+    "name": "Helm",
+    "line": 412
+  },
+  {
+    "name": "Istio",
+    "line": 413
+  },
+  {
+    "name": "OPA",
+    "line": 414
+  },
+  {
+    "name": "Volatility",
+    "line": 421
+  },
+  {
+    "name": "Volatility3",
+    "line": 422
+  },
+  {
+    "name": "Foremost",
+    "line": 423
+  },
+  {
+    "name": "PhotoRec",
+    "line": 424
+  },
+  {
+    "name": "TestDisk",
+    "line": 425
+  },
+  {
+    "name": "Steghide",
+    "line": 426
+  },
+  {
+    "name": "Stegsolve",
+    "line": 427
+  },
+  {
+    "name": "Zsteg",
+    "line": 428
+  },
+  {
+    "name": "Outguess",
+    "line": 429
+  },
+  {
+    "name": "ExifTool",
+    "line": 430
+  },
+  {
+    "name": "Binwalk",
+    "line": 431
+  },
+  {
+    "name": "Scalpel",
+    "line": 432
+  },
+  {
+    "name": "Bulk Extractor",
+    "line": 433
+  },
+  {
+    "name": "Autopsy",
+    "line": 434
+  },
+  {
+    "name": "Sleuth Kit",
+    "line": 435
+  },
+  {
+    "name": "John the Ripper",
+    "line": 438
+  },
+  {
+    "name": "Hashcat",
+    "line": 439
+  },
+  {
+    "name": "Hash-Identifier",
+    "line": 440
+  },
+  {
+    "name": "CyberChef",
+    "line": 441
+  },
+  {
+    "name": "Cipher-Identifier",
+    "line": 442
+  },
+  {
+    "name": "Frequency-Analysis",
+    "line": 443
+  },
+  {
+    "name": "RSATool",
+    "line": 444
+  },
+  {
+    "name": "FactorDB",
+    "line": 445
+  },
+  {
+    "name": "Amass",
+    "line": 452
+  },
+  {
+    "name": "Subfinder",
+    "line": 453
+  },
+  {
+    "name": "Hakrawler",
+    "line": 454
+  },
+  {
+    "name": "HTTPx",
+    "line": 455
+  },
+  {
+    "name": "ParamSpider",
+    "line": 456
+  },
+  {
+    "name": "Aquatone",
+    "line": 457
+  },
+  {
+    "name": "Subjack",
+    "line": 458
+  },
+  {
+    "name": "DNSEnum",
+    "line": 459
+  },
+  {
+    "name": "Fierce",
+    "line": 460
+  },
+  {
+    "name": "TheHarvester",
+    "line": 461
+  },
+  {
+    "name": "Sherlock",
+    "line": 462
+  },
+  {
+    "name": "Social-Analyzer",
+    "line": 463
+  },
+  {
+    "name": "Recon-ng",
+    "line": 464
+  },
+  {
+    "name": "Maltego",
+    "line": 465
+  },
+  {
+    "name": "SpiderFoot",
+    "line": 466
+  },
+  {
+    "name": "Shodan",
+    "line": 467
+  },
+  {
+    "name": "Censys",
+    "line": 468
+  },
+  {
+    "name": "Have I Been Pwned",
+    "line": 469
+  },
+  {
+    "name": "Pipl",
+    "line": 470
+  },
+  {
+    "name": "TruffleHog",
+    "line": 471
+  }
+]

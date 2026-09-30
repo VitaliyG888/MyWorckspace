@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "hexstrike-rust": {
+      "command": "/absolute/path/hexstrike-rust",
+      "args": [
+        "--mcp-stdio"
+      ],
+      "env": {
+        "HEXSTRIKE_SCOPE": "example.com"
+      }
+    }
+  }
+}

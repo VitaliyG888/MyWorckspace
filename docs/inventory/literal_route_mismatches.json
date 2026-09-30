@@ -1,0 +1,7 @@
+[
+  {
+    "tool": "burpsuite_scan",
+    "line": 3462,
+    "endpoint": "/api/tools/burpsuite"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "hexstrike_server.py": {
+    "lines": 17289,
+    "classes": 44,
+    "functions_methods": 448,
+    "imports": 44,
+    "sha256": "590a31b5e2115331d8ef56abbd73880ebd98a1c66a64e8c8bc99a78c5907a675"
+  },
+  "hexstrike_mcp.py": {
+    "lines": 5470,
+    "classes": 3,
+    "functions_methods": 160,
+    "imports": 11,
+    "sha256": "6274ad945e282ecd94c4ef58ba33f26b5ea79d1aec750af3594cdb118b31db2c"
+  },
+  "routes": 156,
+  "tool_routes": 90,
+  "mcp_registrations": 151,
+  "unique_mcp_names": 150,
+  "pdf_pages": 733
+}
