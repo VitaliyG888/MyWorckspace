@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #7c3aed;
+  --color-on-primary: #ffffff;
+  --color-secondary: #6366f1;
+  --color-accent: #0891b2;
+  --color-background: #070b16;
+  --color-foreground: #f8fafc;
+  --color-muted: #94a3b8;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-destructive: #dc2626;
+  --color-ring: #7c3aed;
+  --color-surface: #10182a;
+  --font-sans: Inter, ui-sans-serif, system-ui, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --font-sans: var(--font-sans);
+}
+
+html,
+body {
+  min-height: 100%;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(124, 58, 237, 0.18), transparent 50%),
+    radial-gradient(900px 500px at 100% 0%, rgba(8, 145, 178, 0.12), transparent 45%),
+    var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--color-ring);
+  outline-offset: 2px;
+}
+
+.motion-fade-in,
+.motion-slide-up,
+.motion-slide-left,
+.motion-card-reveal,
+.motion-image-reveal {
+  animation: studio-enter 280ms ease-out both;
+}
+
+.motion-stagger > * {
+  animation: studio-enter 280ms ease-out both;
+}
+
+.motion-hover-lift,
+.motion-tilt {
+  transition: transform 200ms ease;
+}
+
+.motion-hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+.motion-tilt:hover {
+  transform: perspective(800px) rotateX(2deg) rotateY(-2deg);
+}
+
+@keyframes studio-enter {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-fade-in,
+  .motion-slide-up,
+  .motion-slide-left,
+  .motion-card-reveal,
+  .motion-image-reveal,
+  .motion-stagger > *,
+  .motion-hover-lift,
+  .motion-tilt {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+}

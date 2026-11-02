@@ -1,0 +1,58 @@
+export const BUILTIN_PROVIDER_PRESETS = [
+  {
+    protocol: "openai-chat-completions" as const,
+    displayName: "OpenAI",
+    baseUrl: "https://api.openai.com/v1",
+    kind: "llm" as const,
+    models: ["gpt-4o-mini", "gpt-4o"],
+  },
+  {
+    protocol: "anthropic-messages" as const,
+    displayName: "Anthropic",
+    baseUrl: "https://api.anthropic.com",
+    kind: "llm" as const,
+    models: ["claude-3-5-sonnet-latest", "claude-3-5-haiku-latest"],
+  },
+  {
+    protocol: "google-generative" as const,
+    displayName: "Google Gemini",
+    baseUrl: "https://generativelanguage.googleapis.com/v1beta",
+    kind: "llm" as const,
+    models: ["gemini-2.0-flash", "gemini-1.5-pro"],
+  },
+  {
+    protocol: "openai-chat-completions" as const,
+    displayName: "OpenRouter",
+    baseUrl: "https://openrouter.ai/api/v1",
+    kind: "llm" as const,
+    models: ["openai/gpt-4o-mini", "anthropic/claude-3.5-sonnet"],
+  },
+  {
+    protocol: "ollama" as const,
+    displayName: "Ollama (local)",
+    baseUrl: "http://127.0.0.1:11434",
+    kind: "llm" as const,
+    models: ["llama3.1"],
+  },
+  {
+    protocol: "openai-chat-completions" as const,
+    displayName: "LM Studio (local)",
+    baseUrl: "http://127.0.0.1:1234/v1",
+    kind: "llm" as const,
+    models: ["local-model"],
+  },
+  {
+    protocol: "image-openai" as const,
+    displayName: "OpenAI Images",
+    baseUrl: "https://api.openai.com/v1",
+    kind: "image" as const,
+    models: ["dall-e-3"],
+  },
+  {
+    protocol: "demo" as const,
+    displayName: "Built-in demo",
+    baseUrl: "https://demo.local/v1",
+    kind: "llm" as const,
+    models: ["demo-orchestrator"],
+  },
+];
